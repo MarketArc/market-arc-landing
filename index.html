@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Market Arc — Know the moment prices drop</title>
-<meta name="description" content="Track prices across any store. Get an email the moment the price drops. Free to install, no account needed.">
+<meta name="description" content="Track prices across any store. Get an email the moment the price drops. Free to install.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
@@ -28,7 +28,6 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-heigh
 /* Nav */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(247,245,240,0.92);backdrop-filter:blur(12px)}
 .logo{font-family:var(--serif);font-size:20px;color:var(--ink);letter-spacing:-.3px}
-.logo span{color:var(--accent)}
 .nav-cta{background:var(--ink);color:var(--paper);padding:9px 22px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;transition:opacity .2s}
 .nav-cta:hover{opacity:.8}
 
@@ -87,11 +86,6 @@ h2{font-family:var(--serif);font-size:clamp(32px,5vw,54px);line-height:1.1;lette
 .stores-section{background:var(--paper2);padding:80px 24px;text-align:center}
 .stores-inner{max-width:900px;margin:0 auto}
 .stores-grid{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:40px}
-.store-badge{background:var(--paper);border:1px solid var(--line);border-radius:100px;padding:8px 18px;font-size:14px;color:var(--ink2)}
-.store-badge.uk{border-left:3px solid #012169}
-.store-badge.us{border-left:3px solid #B22234}
-.store-badge.ro{border-left:3px solid #002B7F}
-.store-badge.ext{border-left:3px solid var(--ink3);opacity:.6}
 
 /* Pricing */
 .pricing{padding:100px 24px;max-width:800px;margin:0 auto;text-align:center}
@@ -114,7 +108,6 @@ h2{font-family:var(--serif);font-size:clamp(32px,5vw,54px);line-height:1.1;lette
 /* Footer */
 footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .footer-logo{font-family:var(--serif);font-size:18px}
-.footer-logo span{color:var(--accent)}
 .footer-links{display:flex;gap:24px}
 .footer-links a{font-size:13px;color:var(--ink3);text-decoration:none}
 .footer-links a:hover{color:var(--ink)}
@@ -137,7 +130,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
 <body>
 
 <nav>
-  <div class="logo">Market<span>Arc</span></div>
+  <div class="logo">MarketArc</div>
   <a href="https://market-arc.onrender.com" class="nav-cta">Add to Chrome — Free</a>
 </nav>
 
@@ -154,25 +147,13 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
     </a>
     <a href="#how" class="btn-secondary">How it works</a>
   </div>
-  <p class="hero-note">No account needed &nbsp;·&nbsp; Works on 100+ stores &nbsp;·&nbsp; Alerts by email</p>
+  <p class="hero-note">Works on 100+ stores &nbsp;·&nbsp; Alerts by email</p>
 </section>
 
 <div class="strip">
   <span class="strip-label">Works on</span>
   <div class="store-list">
-    <span class="store">Amazon</span>
-    <span class="store">Nike</span>
-    <span class="store">ASOS</span>
-    <span class="store">Boots</span>
-    <span class="store">AllSaints</span>
-    <span class="store">Adidas</span>
-    <span class="store">Zara</span>
-    <span class="store">Nordstrom</span>
-    <span class="store">Gymshark</span>
-    <span class="store">H&M</span>
-    <span class="store">eMAG</span>
-    <span class="store">Wayfair</span>
-    <span class="store">+ 90 more</span>
+    <span class="store">+ 100 stores</span>
   </div>
 </div>
 
@@ -216,7 +197,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </div>
       <div>
-        <div class="ap-from"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a4cacbd6c1d4c8dde4c9c5d6cfc1d089c5d6c78acac1d0">[email&#160;protected]</a></div>
+        <div class="ap-from">noreply@market-arc.net</div>
         <div class="ap-subject">Price drop — Nike Air Max 97</div>
       </div>
     </div>
@@ -234,35 +215,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
   <div class="stores-inner">
     <p class="section-label">Store coverage</p>
     <h2>One extension.<br>Every store.</h2>
-    <div class="stores-grid">
-      <span class="store-badge uk">Amazon UK</span>
-      <span class="store-badge uk">Boots</span>
-      <span class="store-badge uk">AllSaints</span>
-      <span class="store-badge uk">ASOS</span>
-      <span class="store-badge uk">Wayfair UK</span>
-      <span class="store-badge uk">Debenhams</span>
-      <span class="store-badge uk">House of Fraser</span>
-      <span class="store-badge uk">Cult Beauty</span>
-      <span class="store-badge us">Nike</span>
-      <span class="store-badge us">Adidas</span>
-      <span class="store-badge us">Nordstrom</span>
-      <span class="store-badge us">Gymshark</span>
-      <span class="store-badge us">Zara</span>
-      <span class="store-badge us">Coach</span>
-      <span class="store-badge us">Kate Spade</span>
-      <span class="store-badge us">Wayfair</span>
-      <span class="store-badge us">IKEA</span>
-      <span class="store-badge us">Macys</span>
-      <span class="store-badge ro">eMAG</span>
-      <span class="store-badge ro">Flanco</span>
-      <span class="store-badge ro">Dedeman</span>
-      <span class="store-badge ro">CEL</span>
-      <span class="store-badge ro">Evomag</span>
-      <span class="store-badge ext">Walmart *</span>
-      <span class="store-badge ext">Target *</span>
-      <span class="store-badge ext">+ 75 more</span>
-    </div>
-    <p style="font-size:13px;color:#787878;margin-top:20px">* Extension reads price on page. Automatic monitoring coming soon.</p>
+    <p style="font-size:16px;color:var(--ink2);margin-top:20px">Works with 100+ online stores across the UK, US, Romania and more.</p>
   </div>
 </section>
 
@@ -305,12 +258,19 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
 </section>
 
 <footer>
-  <div class="footer-logo">Market<span>Arc</span></div>
+  <div class="footer-logo">MarketArc</div>
   <div class="footer-links">
     <a href="https://market-arc.onrender.com">App</a>
     <a href="/privacy.html">Privacy</a>
-    <a href="/cdn-cgi/l/email-protection#8af9fffafae5f8fecae7ebf8e1effea7ebf8e9a4e4effe">Contact</a>
+    <a href="mailto:support@market-arc.net">Contact</a>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') })
+}, {threshold:.15})
+document.querySelectorAll('.reveal').forEach(el => io.observe(el))
+</script>
+</body>
+</html>
