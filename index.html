@@ -170,7 +170,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
 </section>
 
 <div class="strip">
-  <span class="strip-label">Works on</span>
+  <span class="strip-label">Tracking prices across</span>
   <div class="store-list">
     <span class="store">Nike</span>
     <span class="store">ASOS</span>
@@ -182,7 +182,21 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
     <span class="store">John Lewis</span>
     <span class="store">Next</span>
     <span class="store">Boots</span>
+    <span class="store">Amazon</span>
     <span class="store">+ 100 more</span>
+  </div>
+</div>
+
+<div style="background:var(--navy2);border-bottom:1px solid var(--line);padding:28px 24px;">
+  <div style="display:flex;justify-content:center;gap:60px;flex-wrap:wrap;max-width:600px;margin:0 auto">
+    <div style="text-align:center">
+      <div id="hero-products" style="font-family:var(--serif);font-size:36px;color:var(--gold);font-weight:700;line-height:1">&mdash;</div>
+      <div style="font-size:12px;color:var(--white3);margin-top:4px">Products tracked</div>
+    </div>
+    <div style="text-align:center">
+      <div id="hero-checks" style="font-family:var(--serif);font-size:36px;color:var(--gold);font-weight:700;line-height:1">&mdash;</div>
+      <div style="font-size:12px;color:var(--white3);margin-top:4px">Price checks this week</div>
+    </div>
   </div>
 </div>
 
@@ -399,11 +413,16 @@ function animateCounter(el, target) {
 fetch('https://market-arc.onrender.com/api/stats')
   .then(r => r.json())
   .then(data => {
+    /* Hero stats bar — animate immediately */
+    if (data.products) animateCounter(document.getElementById('hero-products'), data.products);
+    if (data.checks_this_week) animateCounter(document.getElementById('hero-checks'), data.checks_this_week);
+
+    /* Lower counter section — animate on scroll */
     const obsCounter = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) {
           if (data.products) animateCounter(document.getElementById('stat-products'), data.products);
-          if (data.checks_today) animateCounter(document.getElementById('stat-checks'), data.checks_today);
+          if (data.checks_this_week) animateCounter(document.getElementById('stat-checks'), data.checks_this_week);
           if (data.drops) animateCounter(document.getElementById('stat-drops'), data.drops);
           obsCounter.disconnect();
         }
@@ -412,6 +431,8 @@ fetch('https://market-arc.onrender.com/api/stats')
     obsCounter.observe(document.querySelector('.counter-section'));
   })
   .catch(() => {
+    document.getElementById('hero-products').textContent = '100+';
+    document.getElementById('hero-checks').textContent = '1k+';
     document.getElementById('stat-products').textContent = '100+';
     document.getElementById('stat-checks').textContent = '1k+';
     document.getElementById('stat-drops').textContent = '50+';
