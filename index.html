@@ -180,43 +180,25 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
       </div>
       <p class="hero-note" style="text-align:left">Free plan: 3 products &nbsp;&middot;&nbsp; Pro: 25 products &nbsp;&middot;&nbsp; No credit card required</p>
     </div>
-    <!-- Right column -->
-    <div style="max-width:380px;display:flex;flex-direction:column;gap:10px">
-      <!-- Email card -->
-      <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:20px;animation:fadeUp .6s .2s ease both">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--line)">
-          <div style="width:28px;height:28px;border-radius:4px;background:var(--gold);display:flex;align-items:center;justify-content:center">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div>
-            <div style="font-size:10px;color:var(--white3)">noreply@market-arc.net</div>
-            <div style="font-size:12px;font-weight:500;color:var(--white)">Price drop &mdash; Nike Air Max 97</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:baseline;gap:8px;padding:10px;background:var(--gold-light);border:1px solid rgba(184,150,12,.12);border-radius:4px;margin-bottom:10px">
-          <div style="font-family:var(--serif);font-size:32px;color:var(--gold);font-weight:700">&pound;129</div>
-          <div style="font-size:13px;color:var(--white3);text-decoration:line-through">&pound;180</div>
-          <div style="font-size:10px;font-weight:600;background:#1DB954;color:#fff;padding:2px 8px;border-radius:4px;margin-left:auto">&minus;28%</div>
-        </div>
-        <div style="font-size:12px;color:#1DB954;font-weight:600;text-align:center">You saved &pound;51</div>
-      </div>
-      <!-- Pricing snapshot -->
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;animation:fadeUp .6s .4s ease both">
-        <div style="background:var(--navy2);border:1px solid var(--line);border-radius:4px;padding:10px;text-align:center">
-          <div style="font-size:9px;color:var(--gold-dim);text-transform:uppercase;letter-spacing:.08em">Business</div>
-          <div style="font-family:var(--serif);font-size:18px;color:var(--white);font-weight:700">&pound;49.99</div>
-          <div style="font-size:9px;color:var(--white3)">100 products</div>
-        </div>
-        <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:10px;text-align:center">
-          <div style="font-size:9px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em">Pro</div>
-          <div style="font-family:var(--serif);font-size:18px;color:var(--white);font-weight:700">&pound;5.99</div>
-          <div style="font-size:9px;color:var(--white3)">25 products</div>
-        </div>
-        <div style="background:var(--navy2);border:1px solid var(--line);border-radius:4px;padding:10px;text-align:center">
-          <div style="font-size:9px;color:var(--gold-dim);text-transform:uppercase;letter-spacing:.08em">Free</div>
-          <div style="font-family:var(--serif);font-size:18px;color:var(--white);font-weight:700">&pound;0</div>
-          <div style="font-size:9px;color:var(--white3)">3 products</div>
-        </div>
+    <!-- Right column: compact comparison -->
+    <div style="max-width:380px;animation:fadeUp .6s .2s ease both">
+      <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:16px">
+        <div style="font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;font-weight:500">Market Arc vs Keepa</div>
+        <table style="width:100%;border-collapse:collapse">
+          <thead><tr>
+            <th style="padding:6px 8px;text-align:left;font-size:10px;color:var(--gold-dim);border-bottom:1px solid rgba(184,150,12,.12)"></th>
+            <th style="padding:6px 8px;text-align:left;font-size:10px;color:var(--gold);border-bottom:1px solid rgba(184,150,12,.12)">Market Arc</th>
+            <th style="padding:6px 8px;text-align:left;font-size:10px;color:var(--white3);border-bottom:1px solid rgba(184,150,12,.12)">Keepa</th>
+          </tr></thead>
+          <tbody>
+            <tr><td style="padding:5px 8px;font-size:11px;color:var(--white2)">Price</td><td style="padding:5px 8px;font-size:11px;color:var(--gold);font-weight:600">&pound;5.99/mo</td><td style="padding:5px 8px;font-size:11px;color:var(--white3)">&euro;19/mo</td></tr>
+            <tr><td style="padding:5px 8px;font-size:11px;color:var(--white2)">Stores</td><td style="padding:5px 8px;font-size:11px;color:var(--gold);font-weight:600">Any store</td><td style="padding:5px 8px;font-size:11px;color:var(--white3)">Amazon only</td></tr>
+            <tr><td style="padding:5px 8px;font-size:11px;color:var(--white2)">Email alerts</td><td style="padding:5px 8px;font-size:11px;color:var(--gold)">&#10003;</td><td style="padding:5px 8px;font-size:11px;color:var(--white3)">&#10003;</td></tr>
+            <tr><td style="padding:5px 8px;font-size:11px;color:var(--white2)">Competitors</td><td style="padding:5px 8px;font-size:11px;color:var(--gold)">&#10003;</td><td style="padding:5px 8px;font-size:11px;color:rgba(242,240,235,.2)">&#10005;</td></tr>
+            <tr><td style="padding:5px 8px;font-size:11px;color:var(--white2)">Price history</td><td style="padding:5px 8px;font-size:11px;color:var(--gold)">&#10003;</td><td style="padding:5px 8px;font-size:11px;color:var(--white3)">&#10003;</td></tr>
+          </tbody>
+        </table>
+        <div style="font-size:9px;color:var(--white3);margin-top:8px;font-style:italic">Keepa pricing verified April 2026</div>
       </div>
     </div>
   </div>
@@ -257,7 +239,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
   <p class="section-label">How it works</p>
   <h2>Three steps.<br>Then wait for <em>the email.</em></h2>
   <p class="section-sub">No dashboards to check. No app to open. Just an email when it matters.</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px" class="reveal">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px" class="reveal">
     <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:20px;position:relative">
       <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.1);position:absolute;top:20px;right:24px;font-style:italic">1</span>
       <div style="width:44px;height:44px;border-radius:4px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
@@ -282,74 +264,27 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
       <h3 style="font-size:20px;font-weight:500;margin-bottom:8px;color:var(--white)">Get an email when it drops</h3>
       <p style="font-size:15px;color:var(--white2);line-height:1.6;font-weight:300">We check every hour. The moment the price falls, you get an email with the new price and a direct link to buy.</p>
     </div>
+    <!-- 4th card: email preview -->
+    <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:20px;position:relative">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--line)">
+        <div style="width:28px;height:28px;border-radius:4px;background:var(--gold);display:flex;align-items:center;justify-content:center">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div style="font-size:10px;color:var(--white3)">noreply@market-arc.net</div>
+          <div style="font-size:12px;font-weight:500;color:var(--white)">Price drop &mdash; Nike Air Max 97</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:10px;background:var(--gold-light);border:1px solid rgba(184,150,12,.12);border-radius:4px;margin-bottom:10px">
+        <div style="font-family:var(--serif);font-size:28px;color:var(--gold);font-weight:700">&pound;129</div>
+        <div style="font-size:12px;color:var(--white3);text-decoration:line-through">&pound;180</div>
+        <div style="font-size:10px;font-weight:600;background:#1DB954;color:#fff;padding:2px 8px;border-radius:4px;margin-left:auto">&minus;28%</div>
+      </div>
+      <div style="font-size:12px;color:#1DB954;font-weight:600;text-align:center">You saved &pound;51</div>
+    </div>
   </div>
 </section>
 
-<div style="padding:0 24px 80px;max-width:520px;margin:0 auto" class="reveal">
-  <p class="section-label" style="text-align:center">What the email looks like</p>
-  <div style="background:var(--navy2);border-radius:4px;border:1px solid var(--gold-dim);padding:32px;box-shadow:0 4px 40px rgba(0,0,0,.3)">
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line)">
-      <div style="width:40px;height:40px;border-radius:4px;background:var(--gold);display:flex;align-items:center;justify-content:center">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      </div>
-      <div>
-        <div style="font-size:13px;color:var(--white3)">noreply@market-arc.net</div>
-        <div style="font-size:15px;font-weight:500;color:var(--white)">Price drop &mdash; Nike Air Max 97</div>
-      </div>
-    </div>
-    <div style="font-size:14px;color:var(--white2);line-height:1.7;margin-bottom:24px">Good news. The price just dropped on a product you&rsquo;re tracking.</div>
-    <div style="display:flex;align-items:baseline;gap:12px;padding:16px;background:var(--gold-light);border:1px solid rgba(184,150,12,.15);border-radius:4px;margin-bottom:20px">
-      <div style="font-family:var(--serif);font-size:36px;color:var(--gold)">&pound;129</div>
-      <div style="font-size:16px;color:var(--white3);text-decoration:line-through">&pound;180</div>
-      <div style="font-size:12px;font-weight:600;background:var(--gold);color:var(--navy);padding:3px 10px;border-radius:6px;margin-left:auto">&minus;28%</div>
-    </div>
-    <a href="#" style="display:block;text-align:center;background:var(--gold);color:var(--navy);padding:12px;border-radius:4px;font-size:14px;font-weight:600;text-decoration:none">View on Nike.com &rarr;</a>
-  </div>
-</div>
-
-<section class="compare-section reveal">
-  <div class="compare-inner">
-    <p class="section-label">Why Market Arc</p>
-    <h2>Market Arc vs <em>Keepa</em></h2>
-    <table class="compare-table">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Market Arc</th>
-          <th>Keepa</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Price</td>
-          <td class="check">&pound;5.99/mo</td>
-          <td style="color:var(--white3)">&euro;19/mo</td>
-        </tr>
-        <tr>
-          <td>Stores</td>
-          <td class="check">Any store</td>
-          <td class="cross">Amazon only</td>
-        </tr>
-        <tr>
-          <td>Email alerts</td>
-          <td class="check">&#10003;</td>
-          <td class="check">&#10003;</td>
-        </tr>
-        <tr>
-          <td>Competitor tracking</td>
-          <td class="check">&#10003;</td>
-          <td class="cross">&#10005;</td>
-        </tr>
-        <tr>
-          <td>Price history</td>
-          <td class="check">&#10003;</td>
-          <td class="check">&#10003;</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="compare-footnote">Keepa pricing verified April 2026 &middot; Market Arc is not affiliated with Keepa</p>
-  </div>
-</section>
 
 <section class="counter-section reveal">
   <p class="section-label">Live stats</p>
