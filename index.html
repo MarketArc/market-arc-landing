@@ -3,124 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Market Arc — Know the moment prices drop</title>
-<meta name="description" content="Track prices across any store. Get an email the moment the price drops. Free to install.">
+<title>Market Arc — Intelligence for every purchase</title>
+<meta name="description" content="Track prices on any store. Get alerts when prices drop. Free browser extension for smart shoppers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --ink: #0D0D0D;
-  --ink2: #3D3D3D;
-  --ink3: #787878;
-  --paper: #F7F5F0;
-  --paper2: #EFECE5;
-  --accent: #1A6B4A;
-  --accent-light: #E8F5EE;
-  --accent2: #C8522A;
-  --line: rgba(0,0,0,0.08);
-  --serif: 'Instrument Serif', Georgia, serif;
+  --navy: #0C1520;
+  --navy2: #111D2B;
+  --navy3: #162335;
+  --gold: #C9A84C;
+  --gold-light: rgba(201,168,76,0.12);
+  --gold-dim: rgba(201,168,76,0.4);
+  --white: #F2F0EB;
+  --white2: rgba(242,240,235,0.7);
+  --white3: rgba(242,240,235,0.4);
+  --line: rgba(201,168,76,0.1);
+  --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'DM Sans', system-ui, sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden}
+body{font-family:var(--sans);background:var(--navy);color:var(--white);line-height:1.6;overflow-x:hidden}
 
 /* Nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(247,245,240,0.92);backdrop-filter:blur(12px)}
-.logo{font-family:var(--serif);font-size:20px;color:var(--ink);letter-spacing:-.3px}
-.nav-cta{background:var(--ink);color:var(--paper);padding:9px 22px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;transition:opacity .2s}
-.nav-cta:hover{opacity:.8}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(12,21,32,0.92);backdrop-filter:blur(12px)}
+.logo{font-family:var(--serif);font-size:22px;color:var(--gold);letter-spacing:-.3px;font-weight:600}
+.nav-cta{background:var(--gold);color:var(--navy);padding:9px 22px;border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;transition:opacity .2s}
+.nav-cta:hover{opacity:.85}
 
 /* Hero */
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(26,107,74,.07),transparent);pointer-events:none}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;opacity:.6}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--accent-light);border:1px solid rgba(26,107,74,.2);border-radius:100px;padding:5px 14px;font-size:13px;font-weight:500;color:var(--accent);margin-bottom:32px;animation:fadeUp .6s ease both}
-.hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent)}
-h1{font-family:var(--serif);font-size:clamp(44px,8vw,88px);line-height:1.04;letter-spacing:-.03em;color:var(--ink);max-width:900px;margin-bottom:24px;animation:fadeUp .6s .1s ease both}
-h1 em{font-style:italic;color:var(--accent)}
-.hero-sub{font-size:clamp(16px,2vw,20px);color:var(--ink2);max-width:500px;margin-bottom:44px;font-weight:300;animation:fadeUp .6s .2s ease both}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(201,168,76,.06),transparent);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--gold-light);border:1px solid rgba(201,168,76,.2);border-radius:100px;padding:5px 14px;font-size:13px;font-weight:500;color:var(--gold);margin-bottom:32px;animation:fadeUp .6s ease both}
+.hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+h1{font-family:var(--serif);font-size:clamp(40px,7.5vw,82px);line-height:1.06;letter-spacing:-.03em;color:var(--white);max-width:850px;margin-bottom:24px;animation:fadeUp .6s .1s ease both}
+h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:clamp(16px,2vw,20px);color:var(--white2);max-width:520px;margin-bottom:44px;font-weight:300;animation:fadeUp .6s .2s ease both}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;animation:fadeUp .6s .3s ease both}
-.btn-primary{background:var(--ink);color:var(--paper);padding:14px 32px;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .2s,opacity .2s}
+.btn-primary{background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .2s,opacity .2s}
 .btn-primary:hover{transform:translateY(-1px);opacity:.9}
-.btn-secondary{background:transparent;color:var(--ink);padding:14px 32px;border-radius:100px;font-size:15px;font-weight:400;text-decoration:none;border:1px solid rgba(0,0,0,.15);transition:border-color .2s,background .2s}
-.btn-secondary:hover{border-color:rgba(0,0,0,.3);background:rgba(0,0,0,.03)}
-.hero-note{font-size:13px;color:var(--ink3);margin-top:20px;animation:fadeUp .6s .4s ease both}
+.btn-secondary{background:transparent;color:var(--white);padding:14px 32px;border-radius:100px;font-size:15px;font-weight:400;text-decoration:none;border:1px solid var(--gold-dim);transition:border-color .2s,background .2s}
+.btn-secondary:hover{border-color:var(--gold);background:var(--gold-light)}
+.hero-note{font-size:13px;color:var(--white3);margin-top:20px;animation:fadeUp .6s .4s ease both}
 
-/* Social proof strip */
-.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 40px;display:flex;align-items:center;gap:40px;overflow-x:auto;background:var(--paper2)}
-.strip-label{font-size:12px;color:var(--ink3);white-space:nowrap;flex-shrink:0}
+/* Store strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 40px;display:flex;align-items:center;gap:40px;overflow-x:auto;background:var(--navy2)}
+.strip-label{font-size:12px;color:var(--gold-dim);white-space:nowrap;flex-shrink:0;text-transform:uppercase;letter-spacing:.08em;font-weight:500}
 .store-list{display:flex;gap:28px;flex-wrap:nowrap}
-.store{font-size:13px;color:var(--ink2);white-space:nowrap;font-weight:400;opacity:.7}
+.store{font-size:13px;color:var(--white3);white-space:nowrap;font-weight:400}
 
-/* How it works */
+/* Sections */
 .section{padding:100px 24px;max-width:1100px;margin:0 auto}
-.section-label{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
-h2{font-family:var(--serif);font-size:clamp(32px,5vw,54px);line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
-.section-sub{font-size:18px;color:var(--ink2);font-weight:300;max-width:520px;margin-bottom:60px}
+.section-label{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+h2{font-family:var(--serif);font-size:clamp(30px,5vw,52px);line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;color:var(--white)}
+.section-sub{font-size:18px;color:var(--white2);font-weight:300;max-width:520px;margin-bottom:60px}
+
+/* Steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px}
-.step{background:var(--paper2);padding:40px 36px;position:relative}
+.step{background:var(--navy2);padding:40px 36px;position:relative}
 .step:first-child{border-radius:16px 0 0 16px}
 .step:last-child{border-radius:0 16px 16px 0}
-.step-num{font-family:var(--serif);font-size:72px;line-height:1;color:rgba(0,0,0,.06);position:absolute;top:24px;right:28px;font-style:italic}
-.step-icon{width:44px;height:44px;border-radius:12px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.step-icon svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.8}
-.step h3{font-size:20px;font-weight:500;margin-bottom:8px;letter-spacing:-.02em}
-.step p{font-size:15px;color:var(--ink2);line-height:1.6;font-weight:300}
+.step-num{font-family:var(--serif);font-size:72px;line-height:1;color:rgba(201,168,76,.08);position:absolute;top:24px;right:28px;font-style:italic}
+.step-icon{width:44px;height:44px;border-radius:12px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.step-icon svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.8}
+.step h3{font-size:20px;font-weight:500;margin-bottom:8px;letter-spacing:-.02em;color:var(--white)}
+.step p{font-size:15px;color:var(--white2);line-height:1.6;font-weight:300}
 
 /* Alert preview */
-.alert-preview{margin:80px auto;max-width:480px;background:#fff;border-radius:20px;border:1px solid var(--line);padding:32px;box-shadow:0 4px 40px rgba(0,0,0,.06)}
+.alert-preview{margin:80px auto;max-width:480px;background:var(--navy2);border-radius:20px;border:1px solid var(--line);padding:32px;box-shadow:0 4px 40px rgba(0,0,0,.3)}
 .ap-header{display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line)}
-.ap-avatar{width:40px;height:40px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center}
-.ap-avatar svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.8}
-.ap-from{font-size:13px;color:var(--ink3)}
-.ap-subject{font-size:15px;font-weight:500}
-.ap-body{font-size:14px;color:var(--ink2);line-height:1.7;margin-bottom:24px}
-.ap-price-row{display:flex;align-items:baseline;gap:12px;padding:16px;background:var(--accent-light);border-radius:12px;margin-bottom:20px}
-.ap-price-new{font-family:var(--serif);font-size:36px;color:var(--accent)}
-.ap-price-old{font-size:16px;color:var(--ink3);text-decoration:line-through}
-.ap-badge{font-size:12px;font-weight:600;background:var(--accent);color:#fff;padding:3px 10px;border-radius:100px;margin-left:auto}
-.ap-btn{display:block;text-align:center;background:var(--ink);color:#fff;padding:12px;border-radius:10px;font-size:14px;font-weight:500;text-decoration:none}
+.ap-avatar{width:40px;height:40px;border-radius:10px;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.ap-avatar svg{width:20px;height:20px;stroke:var(--navy);fill:none;stroke-width:1.8}
+.ap-from{font-size:13px;color:var(--white3)}
+.ap-subject{font-size:15px;font-weight:500;color:var(--white)}
+.ap-body{font-size:14px;color:var(--white2);line-height:1.7;margin-bottom:24px}
+.ap-price-row{display:flex;align-items:baseline;gap:12px;padding:16px;background:var(--gold-light);border-radius:12px;margin-bottom:20px}
+.ap-price-new{font-family:var(--serif);font-size:36px;color:var(--gold)}
+.ap-price-old{font-size:16px;color:var(--white3);text-decoration:line-through}
+.ap-badge{font-size:12px;font-weight:600;background:var(--gold);color:var(--navy);padding:3px 10px;border-radius:100px;margin-left:auto}
+.ap-btn{display:block;text-align:center;background:var(--gold);color:var(--navy);padding:12px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none}
 
-/* Stores grid */
-.stores-section{background:var(--paper2);padding:80px 24px;text-align:center}
-.stores-inner{max-width:900px;margin:0 auto}
+/* Comparison table */
+.compare-section{background:var(--navy2);padding:80px 24px}
+.compare-inner{max-width:700px;margin:0 auto}
+.compare-table{width:100%;border-collapse:collapse;margin-top:40px}
+.compare-table th{padding:12px 16px;text-align:left;font-size:13px;color:var(--gold);border-bottom:2px solid rgba(201,168,76,.15);font-weight:500;letter-spacing:.05em;text-transform:uppercase}
+.compare-table td{padding:12px 16px;font-size:14px;color:var(--white2);border-bottom:1px solid rgba(201,168,76,.06)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table .check{color:var(--gold);font-weight:600}
+.compare-table .cross{color:rgba(242,240,235,.2)}
+.compare-footnote{font-size:12px;color:var(--white3);margin-top:16px;font-style:italic}
 
 /* Pricing */
-.pricing{padding:100px 24px;max-width:800px;margin:0 auto;text-align:center}
+.pricing{padding:100px 24px;max-width:960px;margin:0 auto;text-align:center}
 .pricing h2{margin-bottom:12px}
-.pricing-sub{font-size:18px;color:var(--ink2);font-weight:300;margin-bottom:60px}
-.plans{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:600px;margin:0 auto}
-.plan{background:var(--paper2);border-radius:20px;padding:36px;text-align:left;border:1px solid var(--line)}
-.plan.featured{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.plan-name{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;opacity:.6;margin-bottom:8px}
-.plan-price{font-family:var(--serif);font-size:48px;line-height:1;margin-bottom:4px}
-.plan-period{font-size:14px;opacity:.5;margin-bottom:24px}
+.pricing-sub{font-size:18px;color:var(--white2);font-weight:300;margin-bottom:60px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:860px;margin:0 auto}
+.plan{background:var(--navy2);border-radius:20px;padding:36px;text-align:left;border:1px solid var(--line)}
+.plan.featured{background:linear-gradient(135deg,var(--navy3),var(--navy2));border-color:var(--gold-dim)}
+.plan-name{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:8px}
+.plan.featured .plan-name{color:var(--gold)}
+.plan-price{font-family:var(--serif);font-size:48px;line-height:1;margin-bottom:4px;color:var(--white)}
+.plan-period{font-size:14px;color:var(--white3);margin-bottom:24px}
 .plan-features{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
-.plan-features li{font-size:14px;display:flex;align-items:center;gap:8px}
-.plan-features li::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.4;flex-shrink:0}
-.plan-cta{display:block;text-align:center;padding:12px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;border:1px solid currentColor;transition:all .2s}
-.plan.featured .plan-cta{background:var(--paper);color:var(--ink)}
-.plan:not(.featured) .plan-cta{background:transparent;color:var(--ink)}
-.plan-cta:hover{opacity:.8}
+.plan-features li{font-size:14px;color:var(--white2);display:flex;align-items:center;gap:8px}
+.plan-features li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:.5;flex-shrink:0}
+.plan-coming{font-size:11px;color:var(--gold-dim);font-style:italic;margin-top:-4px;margin-bottom:6px}
+.plan-cta{display:block;text-align:center;padding:12px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s}
+.plan.featured .plan-cta{background:var(--gold);color:var(--navy)}
+.plan:not(.featured) .plan-cta{background:transparent;color:var(--white);border:1px solid var(--gold-dim)}
+.plan-cta:hover{opacity:.85}
+
+/* Live counter */
+.counter-section{background:var(--navy2);padding:80px 24px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.counter-grid{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;max-width:800px;margin:0 auto}
+.counter-item{display:flex;flex-direction:column;align-items:center}
+.counter-num{font-family:var(--serif);font-size:clamp(36px,6vw,56px);color:var(--gold);line-height:1;margin-bottom:6px;font-weight:700}
+.counter-label{font-size:13px;color:var(--white3);font-weight:400}
 
 /* Footer */
 footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
-.footer-logo{font-family:var(--serif);font-size:18px}
+.footer-logo{font-family:var(--serif);font-size:18px;color:var(--gold)}
 .footer-links{display:flex;gap:24px}
-.footer-links a{font-size:13px;color:var(--ink3);text-decoration:none}
-.footer-links a:hover{color:var(--ink)}
+.footer-links a{font-size:13px;color:var(--white3);text-decoration:none}
+.footer-links a:hover{color:var(--gold)}
 
 /* Animations */
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
 
+@media(max-width:768px){
+  .plans{grid-template-columns:1fr}
+  .counter-grid{gap:32px}
+}
 @media(max-width:640px){
   nav{padding:16px 20px}
   .step:first-child,.step:last-child{border-radius:0}
   .steps{gap:0}.step{border-radius:0!important}
-  .plans{grid-template-columns:1fr}
   footer{flex-direction:column;align-items:flex-start}
   .strip{padding:16px 20px;gap:20px}
 }
@@ -129,36 +152,43 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
 <body>
 
 <nav>
-  <div class="logo">MarketArc</div>
-  <a href="https://market-arc.onrender.com" class="nav-cta">Add to Chrome — Free</a>
+  <div class="logo"><span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--gold);border-radius:8px;color:var(--navy);font-family:var(--serif);font-size:20px;font-weight:700;margin-right:10px;vertical-align:middle">M</span>Market Arc</div>
+  <a href="https://market-arc.onrender.com/register" class="nav-cta">Start Free</a>
 </nav>
 
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div class="hero-eyebrow">Price tracking for any store</div>
-  <h1>Know the moment prices <em>drop</em></h1>
-  <p class="hero-sub">One click to track any product. We watch it for you and email you the instant the price falls.</p>
+  <div class="hero-eyebrow">Price intelligence for smart shoppers</div>
+  <h1>You're about to pay more than <em>you should.</em></h1>
+  <p class="hero-sub">Market Arc tracks prices across 100+ stores and emails you the moment something drops. So you never overpay again.</p>
   <div class="hero-actions">
-    <a href="https://market-arc.onrender.com" class="btn-primary">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-      Add to Chrome — Free
-    </a>
-    <a href="#how" class="btn-secondary">How it works</a>
+    <a href="https://market-arc.onrender.com/upgrade?plan=pro" class="btn-primary">Start Pro &mdash; &pound;5.99/mo</a>
+    <a href="https://market-arc.onrender.com/register" class="btn-secondary">Try free first</a>
   </div>
-  <p class="hero-note">Works on 100+ stores &nbsp;·&nbsp; Alerts by email</p>
+  <p class="hero-note">100+ stores &nbsp;&middot;&nbsp; Hourly checks &nbsp;&middot;&nbsp; No credit card to start</p>
 </section>
 
 <div class="strip">
   <span class="strip-label">Works on</span>
   <div class="store-list">
-    <span class="store">+ 100 stores</span>
+    <span class="store">Nike</span>
+    <span class="store">ASOS</span>
+    <span class="store">Tommy Hilfiger</span>
+    <span class="store">Wayfair</span>
+    <span class="store">Gymshark</span>
+    <span class="store">H&amp;M</span>
+    <span class="store">Zara</span>
+    <span class="store">John Lewis</span>
+    <span class="store">Next</span>
+    <span class="store">Boots</span>
+    <span class="store">+ 100 more</span>
   </div>
 </div>
 
 <section class="section" id="how">
   <p class="section-label">How it works</p>
-  <h2>Three steps.<br>Then wait for the email.</h2>
+  <h2>Three steps.<br>Then wait for <em>the email.</em></h2>
   <p class="section-sub">No dashboards to check. No app to open. Just an email when it matters.</p>
   <div class="steps reveal">
     <div class="step">
@@ -167,7 +197,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
         <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
       </div>
       <h3>Install the extension</h3>
-      <p>Add Market Arc to Chrome in one click. It sits quietly in your browser and costs nothing.</p>
+      <p>Add Market Arc to your browser in one click. It sits quietly and costs nothing.</p>
     </div>
     <div class="step">
       <span class="step-num">2</span>
@@ -175,7 +205,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       </div>
       <h3>Click track on any product</h3>
-      <p>Browse to any product page. Click the Market Arc icon. Enter your email. Done — we watch it from here.</p>
+      <p>Browse to any product page. Click the icon. Enter your email. Done &mdash; we watch it from here.</p>
     </div>
     <div class="step">
       <span class="step-num">3</span>
@@ -183,7 +213,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </div>
       <h3>Get an email when it drops</h3>
-      <p>We check the price automatically. The moment it drops, you get an email with the new price and a direct link.</p>
+      <p>We check every hour. The moment the price falls, you get an email with the new price and a direct link.</p>
     </div>
   </div>
 </section>
@@ -197,79 +227,195 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
       </div>
       <div>
         <div class="ap-from">noreply@market-arc.net</div>
-        <div class="ap-subject">Price drop — Nike Air Max 97</div>
+        <div class="ap-subject">Price drop &mdash; Nike Air Max 97</div>
       </div>
     </div>
     <div class="ap-body">Good news. The price just dropped on a product you're tracking.</div>
     <div class="ap-price-row">
-      <div class="ap-price-new">£74.99</div>
-      <div class="ap-price-old">£109.99</div>
-      <div class="ap-badge">−32%</div>
+      <div class="ap-price-new">&pound;74.99</div>
+      <div class="ap-price-old">&pound;109.99</div>
+      <div class="ap-badge">&minus;32%</div>
     </div>
-    <a href="#" class="ap-btn">View on Nike.com →</a>
+    <a href="#" class="ap-btn">View on Nike.com &rarr;</a>
   </div>
 </div>
 
-<section class="stores-section reveal">
-  <div class="stores-inner">
-    <p class="section-label">Store coverage</p>
-    <h2>One extension.<br>Every store.</h2>
-    <p style="font-size:16px;color:var(--ink2);margin-top:20px">Works with 100+ online stores across the UK, US, Romania and more.</p>
+<section class="compare-section reveal">
+  <div class="compare-inner">
+    <p class="section-label">Why Market Arc</p>
+    <h2>Market Arc vs <em>Keepa</em></h2>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Market Arc</th>
+          <th>Keepa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Works on any store</td>
+          <td class="check">&#10003;</td>
+          <td class="cross">&#10005; Amazon only</td>
+        </tr>
+        <tr>
+          <td>Email alerts on price drop</td>
+          <td class="check">&#10003;</td>
+          <td class="check">&#10003;</td>
+        </tr>
+        <tr>
+          <td>One-click browser tracking</td>
+          <td class="check">&#10003;</td>
+          <td class="cross">&#10005;</td>
+        </tr>
+        <tr>
+          <td>Competitor price monitoring</td>
+          <td class="check">&#10003; Business</td>
+          <td class="cross">&#10005;</td>
+        </tr>
+        <tr>
+          <td>Deal scoring &amp; historic lows</td>
+          <td class="check">&#10003;</td>
+          <td class="check">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Free tier</td>
+          <td class="check">&#10003; 3 products</td>
+          <td class="check">&#10003; limited</td>
+        </tr>
+        <tr>
+          <td>No Amazon dependency</td>
+          <td class="check">&#10003;</td>
+          <td class="cross">&#10005;</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="compare-footnote">* Keepa is a trademark of Keepa.com. Comparison based on publicly available features as of 2026. Market Arc is not affiliated with Keepa.</p>
+  </div>
+</section>
+
+<section class="counter-section reveal">
+  <p class="section-label">Live stats</p>
+  <h2 style="margin-bottom:40px">Prices tracked <em>right now</em></h2>
+  <div class="counter-grid">
+    <div class="counter-item">
+      <div class="counter-num" id="stat-products">—</div>
+      <div class="counter-label">Products tracked</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-num" id="stat-checks">—</div>
+      <div class="counter-label">Price checks today</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-num" id="stat-drops">—</div>
+      <div class="counter-label">Drops detected</div>
+    </div>
   </div>
 </section>
 
 <section class="pricing reveal">
   <p class="section-label">Pricing</p>
-  <h2>Free to start.<br>Upgrade when you need more.</h2>
+  <h2>Free to start.<br>Upgrade when you <em>need more.</em></h2>
   <p class="pricing-sub">No credit card required to start tracking.</p>
   <div class="plans">
     <div class="plan">
       <div class="plan-name">Free</div>
-      <div class="plan-price">£0</div>
+      <div class="plan-price">&pound;0</div>
       <div class="plan-period">forever</div>
       <ul class="plan-features">
-        <li>Up to 25 products</li>
+        <li>Up to 3 products</li>
         <li>Email alerts on drops</li>
         <li>100+ supported stores</li>
         <li>Unsubscribe anytime</li>
       </ul>
-      <a href="https://market-arc.onrender.com" class="plan-cta">Get started</a>
+      <a href="https://market-arc.onrender.com/register" class="plan-cta">Get started</a>
     </div>
     <div class="plan featured">
       <div class="plan-name">Pro</div>
-      <div class="plan-price">£4</div>
+      <div class="plan-price">&pound;5.99</div>
       <div class="plan-period">per month</div>
       <ul class="plan-features">
-        <li>Unlimited products</li>
-        <li>Priority checking</li>
+        <li>Up to 25 products</li>
+        <li>Price history charts</li>
         <li>Historic low alerts</li>
         <li>Deal scoring</li>
+        <li>Priority checking</li>
       </ul>
-      <a href="https://market-arc.onrender.com" class="plan-cta">Start free trial</a>
+      <a href="https://market-arc.onrender.com/register" class="plan-cta">Start free trial</a>
+    </div>
+    <div class="plan">
+      <div class="plan-name">Business</div>
+      <div class="plan-price">&pound;49.99</div>
+      <div class="plan-period">per month</div>
+      <ul class="plan-features">
+        <li>Up to 100 products</li>
+        <li>Competitor price tracking</li>
+        <li>Gap analysis alerts</li>
+        <li>Everything in Pro</li>
+      </ul>
+      <p class="plan-coming">Coming Soon: API keys &amp; webhooks</p>
+      <a href="https://market-arc.onrender.com/register" class="plan-cta">Start free trial</a>
     </div>
   </div>
 </section>
 
-<section style="padding:80px 24px;text-align:center;background:var(--ink);color:var(--paper)" class="reveal">
-  <h2 style="color:var(--paper);max-width:600px;margin:0 auto 20px;font-size:clamp(28px,5vw,52px)">Stop refreshing.<br><em>Start tracking.</em></h2>
-  <p style="color:rgba(247,245,240,.6);font-size:18px;font-weight:300;margin-bottom:40px">One click. Then we do the work.</p>
-  <a href="https://market-arc.onrender.com" class="btn-primary" style="background:var(--paper);color:var(--ink)">Add to Chrome — Free</a>
+<section style="padding:80px 24px;text-align:center;border-top:1px solid var(--line)" class="reveal">
+  <h2 style="max-width:600px;margin:0 auto 20px;font-size:clamp(28px,5vw,52px)">Intelligence for <em>every purchase.</em></h2>
+  <p style="color:var(--white3);font-size:18px;font-weight:300;margin-bottom:40px">Stop overpaying. Start tracking.</p>
+  <a href="https://market-arc.onrender.com/register" class="btn-primary">Start Tracking — Free</a>
 </section>
 
 <footer>
-  <div class="footer-logo">MarketArc</div>
+  <div class="footer-logo">Market Arc</div>
   <div class="footer-links">
-    <a href="https://market-arc.onrender.com">App</a>
     <a href="https://market-arc.onrender.com/privacy">Privacy</a>
-    <a href="mailto:support@market-arc.net">Contact</a>
+    <a href="https://market-arc.onrender.com/terms">Terms</a>
+    <a href="mailto:support@market-arc.net">support@market-arc.net</a>
   </div>
 </footer>
 
 <script>
+/* Reveal on scroll */
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') })
-}, {threshold:.15})
-document.querySelectorAll('.reveal').forEach(el => io.observe(el))
+}, {threshold:.15});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* Animated counters */
+function animateCounter(el, target) {
+  const duration = 1200;
+  const start = performance.now();
+  const fmt = n => n >= 1000 ? (n/1000).toFixed(1).replace(/\.0$/,'') + 'k' : String(n);
+  function tick(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - t, 3);
+    el.textContent = fmt(Math.round(target * ease));
+    if (t < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+/* Fetch live stats */
+fetch('https://market-arc.onrender.com/api/stats')
+  .then(r => r.json())
+  .then(data => {
+    const obsCounter = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          if (data.products) animateCounter(document.getElementById('stat-products'), data.products);
+          if (data.checks_today) animateCounter(document.getElementById('stat-checks'), data.checks_today);
+          if (data.drops) animateCounter(document.getElementById('stat-drops'), data.drops);
+          obsCounter.disconnect();
+        }
+      });
+    }, {threshold:.3});
+    obsCounter.observe(document.querySelector('.counter-section'));
+  })
+  .catch(() => {
+    document.getElementById('stat-products').textContent = '100+';
+    document.getElementById('stat-checks').textContent = '1k+';
+    document.getElementById('stat-drops').textContent = '50+';
+  });
 </script>
 </body>
 </html>
