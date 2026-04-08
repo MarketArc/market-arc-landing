@@ -12,13 +12,14 @@
   --navy: #132540;
   --navy2: #0F1E30;
   --navy3: #162E45;
-  --gold: #C9A84C;
-  --gold-light: rgba(201,168,76,0.12);
-  --gold-dim: rgba(201,168,76,0.4);
+  --gold: #B8960C;
+  --gold2: #D4A820;
+  --gold-light: rgba(184,150,12,0.12);
+  --gold-dim: rgba(184,150,12,0.4);
   --white: #F2F0EB;
   --white2: rgba(242,240,235,0.7);
   --white3: rgba(242,240,235,0.4);
-  --line: rgba(201,168,76,0.1);
+  --line: rgba(184,150,12,0.1);
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'DM Sans', system-ui, sans-serif;
 }
@@ -34,9 +35,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 
 /* Hero */
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(201,168,76,.06),transparent);pointer-events:none}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--gold-light);border:1px solid rgba(201,168,76,.2);border-radius:6px;padding:5px 14px;font-size:13px;font-weight:500;color:var(--gold);margin-bottom:32px;animation:fadeUp .6s ease both}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(184,150,12,.06),transparent);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(184,150,12,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(184,150,12,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--gold-light);border:1px solid rgba(184,150,12,.2);border-radius:6px;padding:5px 14px;font-size:13px;font-weight:500;color:var(--gold);margin-bottom:32px;animation:fadeUp .6s ease both}
 .hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
 h1{font-family:var(--serif);font-size:clamp(40px,7.5vw,82px);line-height:1.06;letter-spacing:-.03em;color:var(--white);max-width:850px;margin-bottom:24px;animation:fadeUp .6s .1s ease both}
 h1 em{font-style:italic;color:var(--gold)}
@@ -65,7 +66,7 @@ h2{font-family:var(--serif);font-size:clamp(30px,5vw,52px);line-height:1.1;lette
 .step{background:var(--navy2);padding:20px;position:relative}
 .step:first-child{border-radius:4px 0 0 16px}
 .step:last-child{border-radius:0 16px 16px 0}
-.step-num{font-family:var(--serif);font-size:72px;line-height:1;color:rgba(201,168,76,.08);position:absolute;top:24px;right:28px;font-style:italic}
+.step-num{font-family:var(--serif);font-size:72px;line-height:1;color:rgba(184,150,12,.08);position:absolute;top:24px;right:28px;font-style:italic}
 .step-icon{width:44px;height:44px;border-radius:4px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .step-icon svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.8}
 .step h3{font-size:20px;font-weight:500;margin-bottom:8px;letter-spacing:-.02em;color:var(--white)}
@@ -89,8 +90,8 @@ h2{font-family:var(--serif);font-size:clamp(30px,5vw,52px);line-height:1.1;lette
 .compare-section{background:var(--navy2);padding:50px 24px}
 .compare-inner{max-width:700px;margin:0 auto}
 .compare-table{width:100%;border-collapse:collapse;margin-top:40px}
-.compare-table th{padding:10px;text-align:left;font-size:13px;color:var(--gold);border-bottom:2px solid rgba(201,168,76,.15);font-weight:500;letter-spacing:.05em;text-transform:uppercase}
-.compare-table td{padding:10px;font-size:14px;color:var(--white2);border-bottom:1px solid rgba(201,168,76,.06)}
+.compare-table th{padding:10px;text-align:left;font-size:13px;color:var(--gold);border-bottom:2px solid rgba(184,150,12,.15);font-weight:500;letter-spacing:.05em;text-transform:uppercase}
+.compare-table td{padding:10px;font-size:14px;color:var(--white2);border-bottom:1px solid rgba(184,150,12,.06)}
 .compare-table tr:last-child td{border-bottom:none}
 .compare-table .check{color:var(--gold);font-weight:600}
 .compare-table .cross{color:rgba(242,240,235,.2)}
@@ -192,7 +193,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
             <div style="font-size:12px;font-weight:500;color:var(--white)">Price drop &mdash; Nike Air Max 97</div>
           </div>
         </div>
-        <div style="display:flex;align-items:baseline;gap:8px;padding:10px;background:var(--gold-light);border:1px solid rgba(201,168,76,.12);border-radius:4px;margin-bottom:10px">
+        <div style="display:flex;align-items:baseline;gap:8px;padding:10px;background:var(--gold-light);border:1px solid rgba(184,150,12,.12);border-radius:4px;margin-bottom:10px">
           <div style="font-family:var(--serif);font-size:32px;color:var(--gold);font-weight:700">&pound;129</div>
           <div style="font-size:13px;color:var(--white3);text-decoration:line-through">&pound;180</div>
           <div style="font-size:10px;font-weight:600;background:#1DB954;color:#fff;padding:2px 8px;border-radius:4px;margin-left:auto">&minus;28%</div>
@@ -258,7 +259,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
   <p class="section-sub">No dashboards to check. No app to open. Just an email when it matters.</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px" class="reveal">
     <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:20px;position:relative">
-      <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(201,168,76,.1);position:absolute;top:20px;right:24px;font-style:italic">1</span>
+      <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.1);position:absolute;top:20px;right:24px;font-style:italic">1</span>
       <div style="width:44px;height:44px;border-radius:4px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
       </div>
@@ -266,7 +267,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
       <p style="font-size:15px;color:var(--white2);line-height:1.6;font-weight:300">Add Market Arc to your browser. 20 seconds. It sits quietly, costs nothing, and activates only when you click.</p>
     </div>
     <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:20px;position:relative">
-      <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(201,168,76,.1);position:absolute;top:20px;right:24px;font-style:italic">2</span>
+      <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.1);position:absolute;top:20px;right:24px;font-style:italic">2</span>
       <div style="width:44px;height:44px;border-radius:4px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       </div>
@@ -274,7 +275,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
       <p style="font-size:15px;color:var(--white2);line-height:1.6;font-weight:300">Click the Market Arc icon once. Price tracked. Competitor logged. Done. Two seconds, no URL pasting.</p>
     </div>
     <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:20px;position:relative">
-      <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(201,168,76,.1);position:absolute;top:20px;right:24px;font-style:italic">3</span>
+      <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.1);position:absolute;top:20px;right:24px;font-style:italic">3</span>
       <div style="width:44px;height:44px;border-radius:4px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </div>
@@ -297,7 +298,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
       </div>
     </div>
     <div style="font-size:14px;color:var(--white2);line-height:1.7;margin-bottom:24px">Good news. The price just dropped on a product you&rsquo;re tracking.</div>
-    <div style="display:flex;align-items:baseline;gap:12px;padding:16px;background:var(--gold-light);border:1px solid rgba(201,168,76,.15);border-radius:4px;margin-bottom:20px">
+    <div style="display:flex;align-items:baseline;gap:12px;padding:16px;background:var(--gold-light);border:1px solid rgba(184,150,12,.15);border-radius:4px;margin-bottom:20px">
       <div style="font-family:var(--serif);font-size:36px;color:var(--gold)">&pound;129</div>
       <div style="font-size:16px;color:var(--white3);text-decoration:line-through">&pound;180</div>
       <div style="font-size:12px;font-weight:600;background:var(--gold);color:var(--navy);padding:3px 10px;border-radius:6px;margin-left:auto">&minus;28%</div>
@@ -372,44 +373,6 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
 <section class="pricing reveal">
   <p class="section-label">Pricing</p>
   <h2>Prices dropped 50+ times this week.<br>Were you <em>watching?</em></h2>
-  <div class="plans">
-    <div class="plan">
-      <div class="plan-name">Free</div>
-      <div class="plan-price">&pound;0</div>
-      <div class="plan-period">forever</div>
-      <ul class="plan-features">
-        <li>Up to 3 products</li>
-        <li>Extension only</li>
-        <li>Email alerts on drops</li>
-      </ul>
-      <a href="https://market-arc.onrender.com/register" class="plan-cta">Get started</a>
-    </div>
-    <div class="plan featured">
-      <div class="plan-name">Pro</div>
-      <div class="plan-price">&pound;5.99</div>
-      <div class="plan-period">per month</div>
-      <ul class="plan-features">
-        <li>Up to 25 products</li>
-        <li>Any store</li>
-        <li>Price history</li>
-        <li>Email alerts on drops</li>
-      </ul>
-      <a href="https://market-arc.onrender.com/upgrade?plan=pro" class="plan-cta">Start free trial</a>
-    </div>
-    <div class="plan">
-      <div class="plan-name">Business</div>
-      <div class="plan-price">&pound;49.99</div>
-      <div class="plan-period">per month</div>
-      <ul class="plan-features">
-        <li>Up to 100 products</li>
-        <li>Competitor tracking</li>
-        <li>API keys <span style="font-size:11px;color:var(--gold-dim);font-style:italic;margin-left:4px">Coming Soon</span></li>
-        <li>Webhooks <span style="font-size:11px;color:var(--gold-dim);font-style:italic;margin-left:4px">Coming Soon</span></li>
-      </ul>
-      <a href="https://market-arc.onrender.com/upgrade?plan=business" class="plan-cta">Start free trial</a>
-    </div>
-  </div>
-  <p style="font-size:12px;color:var(--white3);margin-top:24px">No credit card required &middot; Cancel anytime &middot; Prices in GBP</p>
 </section>
 
 <section style="padding:50px 24px;text-align:center;background:var(--navy2);border-top:1px solid var(--line)" class="reveal">
