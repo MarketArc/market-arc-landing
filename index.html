@@ -12,6 +12,9 @@
   --navy: #132540;
   --navy2: #0F1E30;
   --navy3: #162E45;
+  --darkest: #0a1018;
+  --beige: #F5F0E8;
+  --beige2: #EDE7DC;
   --gold: #B8960C;
   --gold2: #D4A820;
   --gold-light: rgba(184,150,12,0.12);
@@ -20,6 +23,7 @@
   --white2: rgba(242,240,235,0.7);
   --white3: rgba(242,240,235,0.4);
   --line: rgba(184,150,12,0.1);
+  --line-dark: rgba(184,150,12,0.15);
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'DM Sans', system-ui, sans-serif;
 }
@@ -28,21 +32,22 @@ html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--navy);color:var(--white);line-height:1.6;overflow-x:hidden}
 
 /* Nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(19,37,64,0.92);backdrop-filter:blur(12px)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(10,16,24,0.95);backdrop-filter:blur(12px)}
 .logo{font-family:var(--serif);font-size:22px;color:var(--gold);letter-spacing:-.3px;font-weight:600}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-size:14px;color:var(--white2);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
 .nav-cta{background:var(--gold);color:var(--navy);padding:9px 22px;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;transition:opacity .2s}
 .nav-cta:hover{opacity:.85}
 
 /* Hero */
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative;overflow:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative;overflow:hidden;background:var(--navy)}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(184,150,12,.06),transparent);pointer-events:none}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(184,150,12,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(184,150,12,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--gold-light);border:1px solid rgba(184,150,12,.2);border-radius:6px;padding:5px 14px;font-size:13px;font-weight:500;color:var(--gold);margin-bottom:32px;animation:fadeUp .6s ease both}
 .hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
 h1{font-family:var(--serif);font-size:clamp(40px,7.5vw,82px);line-height:1.06;letter-spacing:-.03em;color:var(--white);max-width:850px;margin-bottom:24px;animation:fadeUp .6s .1s ease both}
 h1 em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:clamp(16px,2vw,20px);color:var(--white2);max-width:520px;margin-bottom:44px;font-weight:300;animation:fadeUp .6s .2s ease both}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;animation:fadeUp .6s .3s ease both}
 .btn-primary{background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:6px;font-size:15px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .2s,opacity .2s}
 .btn-primary:hover{transform:translateY(-1px);opacity:.9}
 .btn-secondary{background:transparent;color:var(--white);padding:14px 32px;border-radius:6px;font-size:15px;font-weight:400;text-decoration:none;border:1px solid var(--gold-dim);transition:border-color .2s,background .2s}
@@ -50,10 +55,14 @@ h1 em{font-style:italic;color:var(--gold)}
 .hero-note{font-size:13px;color:var(--white3);margin-top:20px;animation:fadeUp .6s .4s ease both}
 
 /* Store strip */
-.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 40px;display:flex;align-items:center;gap:40px;overflow-x:auto;background:var(--navy2)}
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 40px;display:flex;align-items:center;gap:40px;overflow-x:auto;background:var(--darkest)}
 .strip-label{font-size:12px;color:var(--gold-dim);white-space:nowrap;flex-shrink:0;text-transform:uppercase;letter-spacing:.08em;font-weight:500}
 .store-list{display:flex;gap:28px;flex-wrap:nowrap}
 .store{font-size:13px;color:var(--white3);white-space:nowrap;font-weight:400}
+
+/* Gold problem band */
+.problem-band{background:var(--gold);padding:28px 24px;text-align:center}
+.problem-band h2{font-family:var(--serif);font-size:clamp(22px,3.5vw,36px);color:var(--navy);line-height:1.2;letter-spacing:-.02em;margin:0;font-weight:700}
 
 /* Sections */
 .section{padding:50px 24px;max-width:1100px;margin:0 auto}
@@ -61,71 +70,84 @@ h1 em{font-style:italic;color:var(--gold)}
 h2{font-family:var(--serif);font-size:clamp(30px,5vw,52px);line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;color:var(--white)}
 .section-sub{font-size:18px;color:var(--white2);font-weight:300;max-width:520px;margin-bottom:60px}
 
-/* Steps */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px}
-.step{background:var(--navy2);padding:20px;position:relative}
-.step:first-child{border-radius:4px 0 0 16px}
-.step:last-child{border-radius:0 16px 16px 0}
-.step-num{font-family:var(--serif);font-size:72px;line-height:1;color:rgba(184,150,12,.08);position:absolute;top:24px;right:28px;font-style:italic}
-.step-icon{width:44px;height:44px;border-radius:4px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.step-icon svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.8}
-.step h3{font-size:20px;font-weight:500;margin-bottom:8px;letter-spacing:-.02em;color:var(--white)}
-.step p{font-size:15px;color:var(--white2);line-height:1.6;font-weight:300}
+/* Beige sections */
+.beige-section{background:var(--beige)}
+.beige-section .section-label{color:var(--gold)}
+.beige-section h2{color:var(--navy)}
+.beige-section h2 em{color:var(--gold)}
+.beige-section .section-sub{color:rgba(19,37,64,0.6)}
+.beige-section h3{color:var(--navy)!important}
+.beige-section p{color:rgba(19,37,64,0.6)!important}
 
-/* Alert preview */
-.alert-preview{margin:80px auto;max-width:480px;background:var(--navy2);border-radius:4px;border:1px solid var(--line);padding:32px;box-shadow:0 4px 40px rgba(0,0,0,.3)}
-.ap-header{display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line)}
-.ap-avatar{width:40px;height:40px;border-radius:4px;background:var(--gold);display:flex;align-items:center;justify-content:center}
-.ap-avatar svg{width:20px;height:20px;stroke:var(--navy);fill:none;stroke-width:1.8}
-.ap-from{font-size:13px;color:var(--white3)}
-.ap-subject{font-size:15px;font-weight:500;color:var(--white)}
-.ap-body{font-size:14px;color:var(--white2);line-height:1.7;margin-bottom:24px}
-.ap-price-row{display:flex;align-items:baseline;gap:12px;padding:16px;background:var(--gold-light);border-radius:4px;margin-bottom:20px}
-.ap-price-new{font-family:var(--serif);font-size:36px;color:var(--gold)}
-.ap-price-old{font-size:16px;color:var(--white3);text-decoration:line-through}
-.ap-badge{font-size:12px;font-weight:600;background:var(--gold);color:var(--navy);padding:3px 10px;border-radius:6px;margin-left:auto}
-.ap-btn{display:block;text-align:center;background:var(--gold);color:var(--navy);padding:12px;border-radius:4px;font-size:14px;font-weight:600;text-decoration:none}
+/* Dark sections */
+.dark-section{background:var(--darkest)}
 
 /* Comparison table */
-.compare-section{background:var(--navy2);padding:50px 24px}
-.compare-inner{max-width:700px;margin:0 auto}
 .compare-table{width:100%;border-collapse:collapse;margin-top:40px}
 .compare-table th{padding:10px;text-align:left;font-size:13px;color:var(--gold);border-bottom:2px solid rgba(184,150,12,.15);font-weight:500;letter-spacing:.05em;text-transform:uppercase}
 .compare-table td{padding:10px;font-size:14px;color:var(--white2);border-bottom:1px solid rgba(184,150,12,.06)}
 .compare-table tr:last-child td{border-bottom:none}
 .compare-table .check{color:var(--gold);font-weight:600}
 .compare-table .cross{color:rgba(242,240,235,.2)}
-.compare-footnote{font-size:12px;color:var(--white3);margin-top:16px;font-style:italic}
 
 /* Pricing */
 .pricing{padding:50px 24px;max-width:960px;margin:0 auto;text-align:center}
 .pricing h2{margin-bottom:12px}
-.pricing-sub{font-size:18px;color:var(--white2);font-weight:300;margin-bottom:60px}
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:860px;margin:0 auto}
-.plan{background:var(--navy2);border-radius:4px;padding:20px;text-align:left;border:1px solid var(--line)}
-.plan.featured{background:linear-gradient(135deg,var(--navy3),var(--navy2));border-color:var(--gold-dim)}
-.plan-name{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:8px}
+.plan{border-radius:4px;padding:20px;text-align:left;border:1px solid rgba(19,37,64,0.12)}
+.plan.featured{background:var(--navy);border-color:var(--gold-dim)}
+.plan:not(.featured){background:var(--white)}
+.plan-name{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.plan:not(.featured) .plan-name{color:var(--gold)}
 .plan.featured .plan-name{color:var(--gold)}
-.plan-price{font-family:var(--serif);font-size:48px;line-height:1;margin-bottom:4px;color:var(--white)}
-.plan-period{font-size:14px;color:var(--white3);margin-bottom:24px}
+.plan-price{font-family:var(--serif);font-size:48px;line-height:1;margin-bottom:4px}
+.plan:not(.featured) .plan-price{color:var(--navy)}
+.plan.featured .plan-price{color:var(--white)}
+.plan-period{font-size:14px;margin-bottom:24px}
+.plan:not(.featured) .plan-period{color:rgba(19,37,64,0.4)}
+.plan.featured .plan-period{color:var(--white3)}
 .plan-features{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
-.plan-features li{font-size:14px;color:var(--white2);display:flex;align-items:center;gap:8px}
+.plan-features li{font-size:14px;display:flex;align-items:center;gap:8px}
 .plan-features li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:.5;flex-shrink:0}
-.plan-coming{font-size:11px;color:var(--gold-dim);font-style:italic;margin-top:-4px;margin-bottom:6px}
+.plan:not(.featured) .plan-features li{color:rgba(19,37,64,0.6)}
+.plan.featured .plan-features li{color:var(--white2)}
 .plan-cta{display:block;text-align:center;padding:12px;border-radius:6px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s}
 .plan.featured .plan-cta{background:var(--gold);color:var(--navy)}
-.plan:not(.featured) .plan-cta{background:transparent;color:var(--white);border:1px solid var(--gold-dim)}
+.plan:not(.featured) .plan-cta{background:transparent;color:var(--navy);border:1px solid var(--gold-dim)}
 .plan-cta:hover{opacity:.85}
 
 /* Live counter */
-.counter-section{background:var(--navy2);padding:50px 24px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.counter-section{background:var(--navy);padding:50px 24px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .counter-grid{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;max-width:800px;margin:0 auto}
 .counter-item{display:flex;flex-direction:column;align-items:center}
 .counter-num{font-family:var(--serif);font-size:clamp(36px,6vw,56px);color:var(--gold);line-height:1;margin-bottom:6px;font-weight:700}
 .counter-label{font-size:13px;color:var(--white3);font-weight:400}
 
+/* Urgency band */
+.urgency-band{background:var(--darkest);padding:40px 24px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.urgency-band h2{font-family:var(--serif);font-size:clamp(24px,4vw,42px);color:var(--white);line-height:1.15;letter-spacing:-.02em;margin:0 auto 8px;max-width:700px}
+.urgency-band h2 em{color:var(--gold);font-style:italic}
+.urgency-band p{font-size:15px;color:var(--white3);font-weight:300}
+
+/* Dashboard mockup */
+.dashboard{background:var(--navy);border:1px solid var(--line);border-radius:8px;overflow:hidden;max-width:600px;margin:0 auto;box-shadow:0 8px 40px rgba(0,0,0,.4)}
+.dash-bar{background:rgba(184,150,12,.08);padding:10px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line)}
+.dash-dot{width:8px;height:8px;border-radius:50%;background:rgba(184,150,12,.25)}
+.dash-dot.active{background:var(--gold)}
+.dash-title{font-size:12px;color:var(--gold);margin-left:8px;font-weight:500}
+.dash-body{padding:20px}
+.dash-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}
+.dash-row:last-child{border-bottom:none}
+.dash-product{font-size:13px;color:var(--white);font-weight:500}
+.dash-store{font-size:11px;color:var(--white3)}
+.dash-prices{display:flex;align-items:center;gap:12px}
+.dash-price{font-family:var(--serif);font-size:18px;color:var(--white);font-weight:600}
+.dash-gap{font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px}
+.dash-gap.cheaper{background:rgba(29,185,84,.15);color:#1DB954}
+.dash-gap.expensive{background:rgba(255,77,77,.12);color:#ff4d4d}
+
 /* Footer */
-footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .footer-logo{font-family:var(--serif);font-size:18px;color:var(--gold)}
 .footer-links{display:flex;gap:24px}
 .footer-links a{font-size:13px;color:var(--white3);text-decoration:none}
@@ -145,11 +167,11 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
   .hero > div h1{text-align:center!important}
   .hero > div .hero-note{text-align:center!important}
   .hero > div > div:last-child{max-width:400px;margin:0 auto}
+  .nav-links{gap:12px}
+  .nav-links a.nav-hide-mobile{display:none}
 }
 @media(max-width:640px){
   nav{padding:16px 20px}
-  .step:first-child,.step:last-child{border-radius:0}
-  .steps{gap:0}.step{border-radius:0!important}
   footer{flex-direction:column;align-items:flex-start}
   .strip{padding:16px 20px;gap:20px}
 }
@@ -159,12 +181,15 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
 
 <nav>
   <div class="logo"><span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--gold);border-radius:8px;color:var(--navy);font-family:var(--serif);font-size:20px;font-weight:700;margin-right:10px;vertical-align:middle">M</span>Market Arc</div>
-  <div style="display:flex;align-items:center;gap:16px">
-    <a href="https://market-arc.onrender.com/login" style="font-size:14px;color:var(--white2);text-decoration:none">Sign in</a>
+  <div class="nav-links">
+    <a href="#pricing" class="nav-hide-mobile">Pricing</a>
+    <a href="https://addons.mozilla.org/en-GB/firefox/addon/market-arc/" class="nav-hide-mobile">Extensions</a>
+    <a href="https://market-arc.onrender.com/login">Sign in</a>
     <a href="https://market-arc.onrender.com/register" class="nav-cta">Start Free</a>
   </div>
 </nav>
 
+<!-- HERO — navy -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
@@ -180,7 +205,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
       </div>
       <p class="hero-note" style="text-align:left">Free plan: 3 products &nbsp;&middot;&nbsp; Pro: 25 products &nbsp;&middot;&nbsp; No credit card required</p>
     </div>
-    <!-- Right column -->
+    <!-- Right column: Keepa table first, then Nike card -->
     <div style="max-width:380px;display:flex;flex-direction:column;gap:10px;animation:fadeUp .6s .2s ease both">
       <!-- Keepa comparison -->
       <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:16px">
@@ -238,6 +263,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
   </div>
 </section>
 
+<!-- STORE STRIP — darkest -->
 <div class="strip">
   <span class="strip-label">Tracking prices across</span>
   <div class="store-list">
@@ -256,7 +282,13 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
   </div>
 </div>
 
-<div style="background:var(--navy2);border-bottom:1px solid var(--line);padding:12px 24px;">
+<!-- GOLD PROBLEM BAND -->
+<div class="problem-band reveal">
+  <h2>Prices change every day. Most people miss it.</h2>
+</div>
+
+<!-- STATS BAR — darkest -->
+<div style="background:var(--darkest);border-bottom:1px solid var(--line);padding:12px 24px;">
   <div style="display:flex;justify-content:center;gap:60px;flex-wrap:wrap;max-width:600px;margin:0 auto">
     <div style="text-align:center">
       <div id="hero-products" style="font-family:var(--serif);font-size:36px;color:var(--gold);font-weight:700;line-height:1">&mdash;</div>
@@ -269,123 +301,225 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
   </div>
 </div>
 
-<section class="section" id="how">
-  <p class="section-label">How it works</p>
-  <h2>Three steps.<br>Then wait for <em>the email.</em></h2>
-  <p class="section-sub">No dashboards to check. No app to open. Just an email when it matters.</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px" class="reveal">
-    <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:20px;position:relative">
-      <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.1);position:absolute;top:20px;right:24px;font-style:italic">1</span>
-      <div style="width:44px;height:44px;border-radius:4px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-      </div>
-      <h3 style="font-size:20px;font-weight:500;margin-bottom:8px;color:var(--white)">Install the extension</h3>
-      <p style="font-size:15px;color:var(--white2);line-height:1.6;font-weight:300">Add Market Arc to your browser. 20 seconds. It sits quietly, costs nothing, and activates only when you click.</p>
-    </div>
-    <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:20px;position:relative">
-      <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.1);position:absolute;top:20px;right:24px;font-style:italic">2</span>
-      <div style="width:44px;height:44px;border-radius:4px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      </div>
-      <h3 style="font-size:20px;font-weight:500;margin-bottom:8px;color:var(--white)">Open any product page</h3>
-      <p style="font-size:15px;color:var(--white2);line-height:1.6;font-weight:300">Click the Market Arc icon once. Price tracked. Competitor logged. Done. Two seconds, no URL pasting.</p>
-    </div>
-    <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:20px;position:relative">
-      <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.1);position:absolute;top:20px;right:24px;font-style:italic">3</span>
-      <div style="width:44px;height:44px;border-radius:4px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      </div>
-      <h3 style="font-size:20px;font-weight:500;margin-bottom:8px;color:var(--white)">Get an email when it drops</h3>
-      <p style="font-size:15px;color:var(--white2);line-height:1.6;font-weight:300">We check every hour. The moment the price falls, you get an email with the new price and a direct link to buy.</p>
-    </div>
-    <!-- 4th card: email preview -->
-    <div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:20px;position:relative">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--line)">
-        <div style="width:28px;height:28px;border-radius:4px;background:var(--gold);display:flex;align-items:center;justify-content:center">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+<!-- SHOPPER SECTION — beige -->
+<section class="beige-section reveal" id="how">
+  <div class="section" style="padding-top:60px;padding-bottom:60px">
+    <p class="section-label">For Shoppers</p>
+    <h2>Three steps.<br>Then wait for <em>the email.</em></h2>
+    <p class="section-sub">No dashboards to check. No app to open. Just an email when it matters.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+      <div style="background:var(--white);border:1px solid rgba(184,150,12,.2);border-radius:4px;padding:20px;position:relative">
+        <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.12);position:absolute;top:20px;right:24px;font-style:italic">1</span>
+        <div style="width:44px;height:44px;border-radius:4px;background:rgba(184,150,12,.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         </div>
-        <div>
-          <div style="font-size:10px;color:var(--white3)">noreply@market-arc.net</div>
-          <div style="font-size:12px;font-weight:500;color:var(--white)">Price drop &mdash; Nike Air Max 97</div>
+        <h3 style="font-size:20px;font-weight:500;margin-bottom:8px">Install the extension</h3>
+        <p style="font-size:15px;line-height:1.6;font-weight:300">Add Market Arc to your browser. 20 seconds. It sits quietly, costs nothing, and activates only when you click.</p>
+      </div>
+      <div style="background:var(--white);border:1px solid rgba(184,150,12,.2);border-radius:4px;padding:20px;position:relative">
+        <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.12);position:absolute;top:20px;right:24px;font-style:italic">2</span>
+        <div style="width:44px;height:44px;border-radius:4px;background:rgba(184,150,12,.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         </div>
+        <h3 style="font-size:20px;font-weight:500;margin-bottom:8px">Open any product page</h3>
+        <p style="font-size:15px;line-height:1.6;font-weight:300">Click the Market Arc icon once. Price tracked. Competitor logged. Done. Two seconds, no URL pasting.</p>
       </div>
-      <div style="display:flex;align-items:baseline;gap:8px;padding:10px;background:var(--gold-light);border:1px solid rgba(184,150,12,.12);border-radius:4px;margin-bottom:10px">
-        <div style="font-family:var(--serif);font-size:28px;color:var(--gold);font-weight:700">&pound;129</div>
-        <div style="font-size:12px;color:var(--white3);text-decoration:line-through">&pound;180</div>
-        <div style="font-size:10px;font-weight:600;background:#1DB954;color:#fff;padding:2px 8px;border-radius:4px;margin-left:auto">&minus;28%</div>
+      <div style="background:var(--white);border:1px solid rgba(184,150,12,.2);border-radius:4px;padding:20px;position:relative">
+        <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.12);position:absolute;top:20px;right:24px;font-style:italic">3</span>
+        <div style="width:44px;height:44px;border-radius:4px;background:rgba(184,150,12,.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3 style="font-size:20px;font-weight:500;margin-bottom:8px">Get an email when it drops</h3>
+        <p style="font-size:15px;line-height:1.6;font-weight:300">We check every hour. The moment the price falls, you get an email with the new price and a direct link to buy.</p>
       </div>
-      <div style="font-size:12px;color:#1DB954;font-weight:600;text-align:center">You saved &pound;51</div>
+      <!-- 4th card: email preview -->
+      <div style="background:var(--white);border:1px solid rgba(184,150,12,.2);border-radius:4px;padding:20px;position:relative">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(184,150,12,.1)">
+          <div style="width:28px;height:28px;border-radius:4px;background:var(--gold);display:flex;align-items:center;justify-content:center">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div style="font-size:10px;color:rgba(19,37,64,0.4)">noreply@market-arc.net</div>
+            <div style="font-size:12px;font-weight:500;color:var(--navy)">Price drop &mdash; Nike Air Max 97</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:8px;padding:10px;background:rgba(184,150,12,.08);border:1px solid rgba(184,150,12,.15);border-radius:4px;margin-bottom:10px">
+          <div style="font-family:var(--serif);font-size:28px;color:var(--gold);font-weight:700">&pound;129</div>
+          <div style="font-size:12px;color:rgba(19,37,64,0.4);text-decoration:line-through">&pound;180</div>
+          <div style="font-size:10px;font-weight:600;background:#1DB954;color:#fff;padding:2px 8px;border-radius:4px;margin-left:auto">&minus;28%</div>
+        </div>
+        <div style="font-size:12px;color:#1DB954;font-weight:600;text-align:center">You saved &pound;51</div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- BUSINESS SECTION — darkest -->
+<section class="dark-section reveal">
+  <div class="section" style="padding-top:60px;padding-bottom:60px">
+    <p class="section-label">For Business</p>
+    <h2>Know what your competitors charge.<br><em>Before they do.</em></h2>
+    <p class="section-sub">Track competitor prices across any store. Get alerts when they change. Spot gaps before your customers do.</p>
+    <!-- Competitor dashboard mockup -->
+    <div class="dashboard">
+      <div class="dash-bar">
+        <div class="dash-dot"></div>
+        <div class="dash-dot"></div>
+        <div class="dash-dot active"></div>
+        <div class="dash-title">Competitor Dashboard &mdash; 3 products tracked</div>
+      </div>
+      <div class="dash-body">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--line)">
+          <div style="font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;font-weight:500">Your Products vs Competitors</div>
+          <div style="font-size:10px;color:var(--white3)">Updated 1h ago</div>
+        </div>
+        <!-- Row 1: Your product -->
+        <div class="dash-row">
+          <div>
+            <div class="dash-product">Nike Air Max 97</div>
+            <div class="dash-store">nike.com &mdash; Your price</div>
+          </div>
+          <div class="dash-prices">
+            <div class="dash-price">&pound;180</div>
+          </div>
+        </div>
+        <!-- Row 1: Competitor -->
+        <div class="dash-row" style="background:rgba(184,150,12,.03);margin:0 -20px;padding:12px 20px;border-bottom:1px solid var(--line)">
+          <div>
+            <div class="dash-product" style="color:var(--white3)">Nike Air Max 97</div>
+            <div class="dash-store">asos.com &mdash; Competitor</div>
+          </div>
+          <div class="dash-prices">
+            <div class="dash-price" style="color:var(--white3)">&pound;165</div>
+            <div class="dash-gap cheaper">&minus;8% cheaper</div>
+          </div>
+        </div>
+        <!-- Row 2: Your product -->
+        <div class="dash-row">
+          <div>
+            <div class="dash-product">Gymshark Vital Tee</div>
+            <div class="dash-store">gymshark.com &mdash; Your price</div>
+          </div>
+          <div class="dash-prices">
+            <div class="dash-price">&pound;25</div>
+          </div>
+        </div>
+        <!-- Row 2: Competitor -->
+        <div class="dash-row" style="background:rgba(184,150,12,.03);margin:0 -20px;padding:12px 20px;border-bottom:1px solid var(--line)">
+          <div>
+            <div class="dash-product" style="color:var(--white3)">Gymshark Vital Tee</div>
+            <div class="dash-store">amazon.co.uk &mdash; Competitor</div>
+          </div>
+          <div class="dash-prices">
+            <div class="dash-price" style="color:var(--white3)">&pound;30</div>
+            <div class="dash-gap expensive">+20% more</div>
+          </div>
+        </div>
+        <!-- Row 3: Your product -->
+        <div class="dash-row">
+          <div>
+            <div class="dash-product">Wayfair Velvet Sofa</div>
+            <div class="dash-store">wayfair.co.uk &mdash; Your price</div>
+          </div>
+          <div class="dash-prices">
+            <div class="dash-price">&pound;599</div>
+          </div>
+        </div>
+        <!-- Row 3: Competitor -->
+        <div class="dash-row" style="background:rgba(184,150,12,.03);margin:0 -20px;padding:12px 20px">
+          <div>
+            <div class="dash-product" style="color:var(--white3)">Wayfair Velvet Sofa</div>
+            <div class="dash-store">johnlewis.com &mdash; Competitor</div>
+          </div>
+          <div class="dash-prices">
+            <div class="dash-price" style="color:var(--white3)">&pound;649</div>
+            <div class="dash-gap expensive">+8% more</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:24px;font-size:14px;color:var(--white3);font-weight:300">Business plan &mdash; &pound;49.99/mo &mdash; up to 100 products with 3 competitors each</p>
+  </div>
+</section>
 
+<!-- LIVE STATS — navy -->
 <section class="counter-section reveal">
   <p class="section-label">Live stats</p>
   <h2 style="margin-bottom:40px">Prices tracked <em>right now</em></h2>
   <div class="counter-grid">
     <div class="counter-item">
-      <div class="counter-num" id="stat-products">—</div>
+      <div class="counter-num" id="stat-products">&mdash;</div>
       <div class="counter-label">Products tracked</div>
     </div>
     <div class="counter-item">
-      <div class="counter-num" id="stat-checks">—</div>
+      <div class="counter-num" id="stat-checks">&mdash;</div>
       <div class="counter-label">Price checks today</div>
     </div>
     <div class="counter-item">
-      <div class="counter-num" id="stat-drops">—</div>
+      <div class="counter-num" id="stat-drops">&mdash;</div>
       <div class="counter-label">Drops detected</div>
     </div>
   </div>
 </section>
 
-<section class="pricing reveal">
-  <p class="section-label">Pricing</p>
-  <h2>Prices dropped 50+ times this week.<br>Were you <em>watching?</em></h2>
-  <div class="plans" style="margin-top:40px">
-    <div class="plan">
-      <div class="plan-name">Free</div>
-      <div class="plan-price">&pound;0</div>
-      <div class="plan-period">forever</div>
-      <ul class="plan-features">
-        <li>Up to 3 products</li>
-        <li>Extension only</li>
-        <li>Email alerts on drops</li>
-      </ul>
-      <a href="https://market-arc.onrender.com/register" class="plan-cta">Get started</a>
-    </div>
-    <div class="plan featured">
-      <div class="plan-name">Pro</div>
-      <div class="plan-price">&pound;5.99</div>
-      <div class="plan-period">per month</div>
-      <ul class="plan-features">
-        <li>Up to 25 products</li>
-        <li>Any store</li>
-        <li>Price history</li>
-        <li>Email alerts on drops</li>
-      </ul>
-      <a href="https://market-arc.onrender.com/upgrade?plan=pro" class="plan-cta">Start free trial</a>
-    </div>
-    <div class="plan">
-      <div class="plan-name">Business</div>
-      <div class="plan-price">&pound;49.99</div>
-      <div class="plan-period">per month</div>
-      <ul class="plan-features">
-        <li>Up to 100 products</li>
-        <li>Competitor tracking</li>
-        <li>Everything in Pro</li>
-      </ul>
-      <a href="https://market-arc.onrender.com/upgrade?plan=business" class="plan-cta">Start free trial</a>
+<!-- PRICING — beige -->
+<section class="beige-section reveal" id="pricing">
+  <div class="pricing" style="padding-top:60px;padding-bottom:60px">
+    <p class="section-label">Pricing</p>
+    <h2>Simple plans. <em>No surprises.</em></h2>
+    <div class="plans" style="margin-top:40px">
+      <div class="plan">
+        <div class="plan-name">Free</div>
+        <div class="plan-price">&pound;0</div>
+        <div class="plan-period">forever</div>
+        <ul class="plan-features">
+          <li>Up to 3 products</li>
+          <li>Extension only</li>
+          <li>Email alerts on drops</li>
+        </ul>
+        <a href="https://market-arc.onrender.com/register" class="plan-cta" style="color:var(--navy);border-color:rgba(19,37,64,0.2)">Get started</a>
+      </div>
+      <div class="plan featured">
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">&pound;5.99</div>
+        <div class="plan-period">per month</div>
+        <ul class="plan-features">
+          <li>Up to 25 products</li>
+          <li>Any store</li>
+          <li>Price history</li>
+          <li>Email alerts on drops</li>
+        </ul>
+        <a href="https://market-arc.onrender.com/upgrade?plan=pro" class="plan-cta">Start free trial</a>
+      </div>
+      <div class="plan">
+        <div class="plan-name">Business</div>
+        <div class="plan-price">&pound;49.99</div>
+        <div class="plan-period">per month</div>
+        <ul class="plan-features">
+          <li>Up to 100 products</li>
+          <li>Competitor tracking</li>
+          <li>Everything in Pro</li>
+        </ul>
+        <a href="https://market-arc.onrender.com/upgrade?plan=business" class="plan-cta" style="color:var(--navy);border-color:rgba(19,37,64,0.2)">Start free trial</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section style="padding:50px 24px;text-align:center;background:var(--navy2);border-top:1px solid var(--line)" class="reveal">
+<!-- URGENCY BAND — darkest -->
+<div class="urgency-band reveal">
+  <h2>Prices dropped 50+ times this week.<br>Were you <em>watching?</em></h2>
+  <p>Every hour counts. Start tracking now.</p>
+</div>
+
+<!-- FINAL CTA — navy -->
+<section style="padding:50px 24px;text-align:center;background:var(--navy)" class="reveal">
   <h2 style="font-family:var(--serif);max-width:600px;margin:0 auto 16px;font-size:clamp(30px,5vw,52px);color:var(--white)">Intelligence for <em>every purchase.</em></h2>
   <p style="color:var(--white3);font-size:18px;font-weight:300;max-width:480px;margin:0 auto 40px">Join shoppers tracking prices across 100+ stores. Free to start.</p>
   <a href="https://market-arc.onrender.com/register" class="btn-primary">Start tracking &mdash; it&rsquo;s free</a>
 </section>
 
+<!-- FOOTER — darkest -->
 <footer>
   <div>
     <span class="footer-logo">Market Arc</span>
@@ -400,19 +534,19 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;align-items:ce
 
 <script>
 /* Reveal on scroll */
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') })
+var io = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if(e.isIntersecting) e.target.classList.add('visible') })
 }, {threshold:.15});
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el) });
 
 /* Animated counters */
 function animateCounter(el, target) {
-  const duration = 1200;
-  const start = performance.now();
-  const fmt = n => n >= 1000 ? (n/1000).toFixed(1).replace(/\.0$/,'') + 'k' : String(n);
+  var duration = 1200;
+  var start = performance.now();
+  function fmt(n) { return n >= 1000 ? (n/1000).toFixed(1).replace(/\.0$/,'') + 'k' : String(n) }
   function tick(now) {
-    const t = Math.min((now - start) / duration, 1);
-    const ease = 1 - Math.pow(1 - t, 3);
+    var t = Math.min((now - start) / duration, 1);
+    var ease = 1 - Math.pow(1 - t, 3);
     el.textContent = fmt(Math.round(target * ease));
     if (t < 1) requestAnimationFrame(tick);
   }
@@ -421,15 +555,15 @@ function animateCounter(el, target) {
 
 /* Fetch live stats */
 fetch('https://market-arc.onrender.com/api/stats')
-  .then(r => r.json())
-  .then(data => {
-    /* Hero stats bar — animate immediately */
+  .then(function(r) { return r.json() })
+  .then(function(data) {
+    /* Hero stats bar */
     if (data.products) animateCounter(document.getElementById('hero-products'), data.products);
     if (data.checks_this_week) animateCounter(document.getElementById('hero-checks'), data.checks_this_week);
 
     /* Lower counter section — animate on scroll */
-    const obsCounter = new IntersectionObserver(entries => {
-      entries.forEach(e => {
+    var obsCounter = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
         if (e.isIntersecting) {
           if (data.products) animateCounter(document.getElementById('stat-products'), data.products);
           if (data.checks_this_week) animateCounter(document.getElementById('stat-checks'), data.checks_this_week);
@@ -440,7 +574,7 @@ fetch('https://market-arc.onrender.com/api/stats')
     }, {threshold:.3});
     obsCounter.observe(document.querySelector('.counter-section'));
   })
-  .catch(() => {
+  .catch(function() {
     document.getElementById('hero-products').textContent = '100+';
     document.getElementById('hero-checks').textContent = '1k+';
     document.getElementById('stat-products').textContent = '100+';
