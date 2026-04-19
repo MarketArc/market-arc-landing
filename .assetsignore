@@ -1,0 +1,9 @@
+.git/
+.wrangler/
+node_modules/
+*.map
+*.log
+index.html.html
+.DS_Store
+.env*
+*.bak
