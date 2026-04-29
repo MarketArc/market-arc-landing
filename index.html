@@ -175,7 +175,8 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
   .nav-links a.nav-hide-mobile{display:none}
 }
 @media(max-width:768px){
-  section#how-it-works > div > div[style*="grid-template-columns:repeat(3"] {
+  section#how-it-works > div > div[style*="grid-template-columns:repeat(3"],
+  section#how-it-works > div > div[style*="grid-template-columns:repeat(4"] {
     grid-template-columns: 1fr !important;
   }
   section#how-it-works > div > div[style*="grid-template-columns:repeat(2"] {
@@ -414,7 +415,7 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
     </p>
 
     <!-- STEPS -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:64px">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:64px">
 
       <div style="background:#132540;border-radius:12px;padding:32px 24px;text-align:center">
         <div style="font-size:36px;margin-bottom:12px">🔌</div>
@@ -439,6 +440,14 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
         <h3 style="font-family:'Cormorant Garamond',serif;color:#C9A84C;font-size:22px;margin-bottom:8px">3. Get alerted when it drops</h3>
         <p style="font-family:'DM Sans',sans-serif;color:rgba(255,255,255,0.7);font-size:14px;line-height:1.6">
           Click "Track" — we check the price automatically. The moment it drops, you get an email with the exact savings.
+        </p>
+      </div>
+
+      <div style="background:#132540;border-radius:12px;padding:32px 24px;text-align:center">
+        <div style="font-size:36px;margin-bottom:12px">📬</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;color:#C9A84C;font-size:22px;margin-bottom:8px">4. Stay alerted in and out of stock</h3>
+        <p style="font-family:'DM Sans',sans-serif;color:rgba(255,255,255,0.7);font-size:14px;line-height:1.6">
+          When items go out of stock, we let you know. When they come back at your tracked price, we email you instantly.
         </p>
       </div>
 
@@ -482,6 +491,7 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
           <li>Up to 3 products</li>
           <li>Browser extension included</li>
           <li>Email alerts on drops</li>
+          <li>Out of stock + restock alerts</li>
           <li style="margin-top:8px;font-style:italic;color:#B8960C;font-size:0.85em">Best for: casual shoppers watching a few items</li>
         </ul>
         <a href="https://app.market-arc.net/register" class="plan-cta" style="color:var(--navy);border-color:rgba(19,37,64,0.2)">Get started</a>
@@ -498,6 +508,7 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
           <li style="font-size:0.85em;color:rgba(245,240,232,0.6);font-style:italic;margin-top:-6px;padding-left:16px">Set your exact number, we'll email when it hits</li>
           <li>Price history &amp; charts</li>
           <li>Priority email delivery</li>
+          <li>Out of stock + restock alerts</li>
           <li style="margin-top:8px;font-style:italic;color:#B8960C;font-size:0.85em">Best for: anyone who's paid full price and regretted it</li>
         </ul>
         <a href="https://app.market-arc.net/upgrade?plan=pro_plus" class="plan-cta">Start &pound;9.99/mo</a>
@@ -515,6 +526,7 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
           <li style="font-size:0.85em;color:#888;font-style:italic;margin-top:-6px;padding-left:16px">Up to 3 competitors per product</li>
           <li>Instant alerts when competitors move</li>
           <li>Weekly market digest every Monday</li>
+          <li>Out of stock + restock alerts</li>
           <li>API keys + Webhooks</li>
           <li>Priority processing</li>
           <li style="margin-top:8px;font-style:italic;color:#B8960C;font-size:0.85em">Best for: sellers who need to know before their customers do</li>
