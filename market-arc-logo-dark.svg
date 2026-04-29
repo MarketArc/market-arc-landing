@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 200" width="680" height="200" role="img" aria-label="Market Arc">
+  <rect width="680" height="200" fill="#132540"/>
+  <path d="M38,172 C160,44 420,44 626,128" stroke="#B8960C" stroke-width="1.4" fill="none" opacity="0.25" stroke-linecap="round"/>
+  <text x="48" y="50" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif" font-size="18" font-weight="500" fill="#F5F0E8" letter-spacing="20">MARKET</text>
+  <rect x="48" y="62" width="596" height="2.5" fill="#B8960C"/>
+  <text x="38" y="172" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif" font-size="128" font-weight="700" fill="#F5F0E8">ARC</text>
+</svg>

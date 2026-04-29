@@ -32,7 +32,7 @@ html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--navy);color:var(--white);line-height:1.6;overflow-x:hidden}
 
 /* Nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(10,16,24,0.95);backdrop-filter:blur(12px)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:#132540;backdrop-filter:blur(12px)}
 .logo{font-family:var(--serif);font-size:22px;color:var(--gold);letter-spacing:-.3px;font-weight:600}
 .nav-links{display:flex;align-items:center;gap:24px}
 .nav-links a{font-size:14px;color:var(--white2);text-decoration:none;transition:color .2s}
@@ -97,7 +97,7 @@ h2{font-family:var(--serif);font-size:clamp(30px,5vw,52px);line-height:1.1;lette
 /* Pricing */
 .pricing{padding:50px 24px;max-width:960px;margin:0 auto;text-align:center}
 .pricing h2{margin-bottom:12px}
-.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1060px;margin:0 auto}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1060px;margin:0 auto}
 .plan{border-radius:4px;padding:20px;text-align:left;border:1px solid rgba(19,37,64,0.12)}
 .plan.featured{background:var(--navy);border-color:var(--gold-dim)}
 .plan:not(.featured){background:var(--white)}
@@ -192,11 +192,11 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
 <body>
 
 <nav>
-  <div class="logo"><img src="icon128_premium_navy.png" width="42" height="42" style="border-radius:8px;margin-right:10px;vertical-align:middle" alt="Market Arc">Market Arc</div>
+  <div class="logo"><img src="market-arc-logo-dark.svg" width="180" height="53" alt="Market Arc" style="display:block"></div>
   <div class="nav-links">
     <a href="#how-it-works" class="nav-hide-mobile">How It Works</a>
+    <a href="https://app.market-arc.net/stores" class="nav-hide-mobile">Stores</a>
     <a href="#pricing" class="nav-hide-mobile">Pricing</a>
-    <a href="#extensions" class="nav-hide-mobile">Extensions</a>
     <a href="https://app.market-arc.net/login">Sign in</a>
     <a href="https://app.market-arc.net/register" class="nav-cta">Start Free</a>
   </div>
@@ -209,6 +209,9 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;width:100%;text-align:left">
     <!-- Left column -->
     <div>
+      <div style="background:rgba(184,150,12,0.08);border:1px solid rgba(184,150,12,0.3);border-radius:8px;padding:14px 18px;margin-bottom:24px;font-size:14px;color:var(--white2);line-height:1.5">
+        &#9889; <strong style="color:var(--gold)">Smart shoppers don&rsquo;t copy-paste URLs.</strong> Open any product page, click once &mdash; price tracked instantly. Install free: <a href="https://chromewebstore.google.com/detail/market-arc/gophaebackmjpcdhmknkfenlnmgphepp" target="_blank" style="color:var(--gold);font-weight:600;text-decoration:underline">Chrome</a>, <a href="https://microsoftedge.microsoft.com/addons/detail/market-arc/ljmgpoiogkngpkamdcoafddgbegfclha" target="_blank" style="color:var(--gold);font-weight:600;text-decoration:underline">Edge</a>, or <a href="https://addons.mozilla.org/en-US/firefox/addon/market-arc/" target="_blank" style="color:var(--gold);font-weight:600;text-decoration:underline">Firefox</a>
+      </div>
       <div class="hero-eyebrow" style="margin-bottom:28px">Price intelligence for smart shoppers</div>
       <h1 style="text-align:left;margin-bottom:20px;font-size:clamp(28px,4vw,48px)">Stop getting outsmarted on <em>price.</em></h1>
       <p style="font-size:17px;color:var(--white2);font-weight:300;line-height:1.7;margin-bottom:36px;max-width:460px">Shop smarter. Save more. Know before you buy.<br>Track competitors. Win more. Know before they do.</p>
@@ -216,7 +219,7 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
         <a href="https://app.market-arc.net/register" class="btn-primary" style="border-radius:6px">Start free &mdash; 3 products</a>
         <a href="https://app.market-arc.net/upgrade?plan=business" class="btn-secondary" style="border-radius:6px">Track competitors &mdash; &pound;49.99/mo</a>
       </div>
-      <p class="hero-note" style="text-align:left">Free plan — no credit card required &nbsp;&middot;&nbsp; Cancel anytime &nbsp;&middot;&nbsp; Chrome &nbsp;&middot;&nbsp; Firefox &nbsp;&middot;&nbsp; Edge</p>
+      <p class="hero-note" style="text-align:left">Free plan — no credit card required &nbsp;&middot;&nbsp; Cancel anytime &nbsp;&middot;&nbsp; Chrome &nbsp;&middot;&nbsp; Edge &nbsp;&middot;&nbsp; Firefox</p>
     </div>
     <!-- Right column: Keepa table first, then Nike card -->
     <div style="max-width:380px;display:flex;flex-direction:column;gap:10px;animation:fadeUp .6s .2s ease both">
@@ -230,7 +233,7 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
             <th style="padding:6px 8px;text-align:left;font-size:10px;color:rgba(245,240,232,0.85);border-bottom:1px solid rgba(184,150,12,.12)">Keepa</th>
           </tr></thead>
           <tbody>
-            <tr><td style="padding:5px 8px;font-size:11px;color:rgba(245,240,232,0.85)">Price</td><td style="padding:5px 8px;font-size:11px;color:var(--gold);font-weight:600">&pound;5.99&ndash;9.99/mo</td><td style="padding:5px 8px;font-size:11px;color:rgba(245,240,232,0.85)">&euro;19/mo</td></tr>
+            <tr><td style="padding:5px 8px;font-size:11px;color:rgba(245,240,232,0.85)">Price</td><td style="padding:5px 8px;font-size:11px;color:var(--gold);font-weight:600">&pound;9.99/mo</td><td style="padding:5px 8px;font-size:11px;color:rgba(245,240,232,0.85)">&euro;19/mo</td></tr>
             <tr><td style="padding:5px 8px;font-size:11px;color:rgba(245,240,232,0.85)">Stores</td><td style="padding:5px 8px;font-size:11px;color:var(--gold);font-weight:600">100+ stores</td><td style="padding:5px 8px;font-size:11px;color:rgba(245,240,232,0.85)">Amazon only</td></tr>
             <tr><td style="padding:5px 8px;font-size:11px;color:rgba(245,240,232,0.85)">Email alerts</td><td style="padding:5px 8px;font-size:11px;color:var(--gold)">&#10003;</td><td style="padding:5px 8px;font-size:11px;color:rgba(245,240,232,0.85)">&#10003;</td></tr>
             <tr><td style="padding:5px 8px;font-size:11px;color:rgba(245,240,232,0.85)">Competitors</td><td style="padding:5px 8px;font-size:11px;color:var(--gold)">&#10003;</td><td style="padding:5px 8px;font-size:11px;color:rgba(242,240,235,.2)">&#10005;</td></tr>
@@ -255,7 +258,7 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
         <div style="font-size:11px;color:#1DB954;font-weight:600;text-align:center">You saved &pound;51</div>
       </div>
       <!-- Plan snapshot -->
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">
         <a href="#pricing" style="text-decoration:none"><div style="background:var(--navy2);border:1px solid var(--line);border-radius:4px;padding:10px;text-align:center">
           <div style="font-size:9px;color:rgba(245,240,232,0.7);text-transform:uppercase;letter-spacing:.08em">Business</div>
           <div style="font-family:var(--serif);font-size:18px;color:#F5F0E8;font-weight:700">&pound;49.99</div>
@@ -264,11 +267,6 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
         <a href="#pricing" style="text-decoration:none"><div style="background:var(--navy2);border:1px solid var(--gold-dim);border-radius:4px;padding:10px;text-align:center">
           <div style="font-size:9px;color:rgba(245,240,232,0.7);text-transform:uppercase;letter-spacing:.08em">Pro+</div>
           <div style="font-family:var(--serif);font-size:18px;color:#F5F0E8;font-weight:700">&pound;9.99</div>
-          <div style="font-size:9px;color:var(--white3)">25 products</div>
-        </div></a>
-        <a href="#pricing" style="text-decoration:none"><div style="background:var(--navy2);border:1px solid var(--line);border-radius:4px;padding:10px;text-align:center">
-          <div style="font-size:9px;color:rgba(245,240,232,0.7);text-transform:uppercase;letter-spacing:.08em">Pro</div>
-          <div style="font-family:var(--serif);font-size:18px;color:#F5F0E8;font-weight:700">&pound;5.99</div>
           <div style="font-size:9px;color:var(--white3)">25 products</div>
         </div></a>
         <a href="#pricing" style="text-decoration:none"><div style="background:var(--navy2);border:1px solid var(--line);border-radius:4px;padding:10px;text-align:center">
@@ -286,12 +284,10 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
   <span class="strip-label">Tracking prices across</span>
   <div class="store-list">
     <span class="store">Nike</span>
-    <span class="store">ASOS</span>
+    <span class="store">Apple</span>
     <span class="store">Tommy Hilfiger</span>
-    <span class="store">Wayfair</span>
-    <span class="store">Gymshark</span>
-    <span class="store">H&amp;M</span>
-    <span class="store">Zara</span>
+    <span class="store">Argos</span>
+    <span class="store">M&amp;S</span>
     <span class="store">John Lewis</span>
     <span class="store">Next</span>
     <span class="store">Currys</span>
@@ -318,63 +314,6 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
     </div>
   </div>
 </div>
-
-<!-- SHOPPER SECTION — beige -->
-<section class="beige-section reveal" id="extensions">
-  <div class="section" style="padding-top:60px;padding-bottom:60px">
-    <p class="section-label">For Shoppers</p>
-    <h2>Three steps.<br>Then wait for <em>the email.</em></h2>
-    <p class="section-sub">No dashboards to check. No app to open. Just an email when it matters.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
-      <div style="background:#132540;border:1px solid rgba(184,150,12,.2);border-radius:4px;padding:20px;position:relative">
-        <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.12);position:absolute;top:20px;right:24px;font-style:italic">1</span>
-        <div style="width:44px;height:44px;border-radius:4px;background:rgba(184,150,12,.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8960C" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
-        <h3 style="font-size:20px;font-weight:500;margin-bottom:8px;color:#F5F0E8">Install the extension</h3>
-        <p style="font-size:15px;line-height:1.6;font-weight:300;color:rgba(245,240,232,0.85)">Add Market Arc to your browser. 20 seconds. It sits quietly, costs nothing, and activates only when you click.</p>
-        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
-          <a href="https://addons.mozilla.org/en-GB/firefox/addon/market-arc/" style="font-size:13px;color:#B8960C;text-decoration:none;font-weight:500;border:1px solid rgba(184,150,12,.3);padding:5px 12px;border-radius:4px;transition:background .2s" onmouseover="this.style.background='rgba(184,150,12,.1)'" onmouseout="this.style.background='transparent'">Firefox</a>
-          <a href="https://microsoftedge.microsoft.com/addons/detail/market-arc/ljmgpoiogkngpkamdcoafddgbegfclha" style="font-size:13px;color:#B8960C;text-decoration:none;font-weight:500;border:1px solid rgba(184,150,12,.3);padding:5px 12px;border-radius:4px;transition:background .2s" onmouseover="this.style.background='rgba(184,150,12,.1)'" onmouseout="this.style.background='transparent'">Edge</a>
-        </div>
-      </div>
-      <div style="background:#132540;border:1px solid rgba(184,150,12,.2);border-radius:4px;padding:20px;position:relative">
-        <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.12);position:absolute;top:20px;right:24px;font-style:italic">2</span>
-        <div style="width:44px;height:44px;border-radius:4px;background:rgba(184,150,12,.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8960C" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        </div>
-        <h3 style="font-size:20px;font-weight:500;margin-bottom:8px;color:#F5F0E8">Open any product page</h3>
-        <p style="font-size:15px;line-height:1.6;font-weight:300;color:rgba(245,240,232,0.85)">Click the Market Arc icon once. Price tracked. Competitor logged. Done. Two seconds, no URL pasting.</p>
-      </div>
-      <div style="background:#132540;border:1px solid rgba(184,150,12,.2);border-radius:4px;padding:20px;position:relative">
-        <span style="font-family:var(--serif);font-size:64px;line-height:1;color:rgba(184,150,12,.12);position:absolute;top:20px;right:24px;font-style:italic">3</span>
-        <div style="width:44px;height:44px;border-radius:4px;background:rgba(184,150,12,.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8960C" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <h3 style="font-size:20px;font-weight:500;margin-bottom:8px;color:#F5F0E8">Get an email when it drops</h3>
-        <p style="font-size:15px;line-height:1.6;font-weight:300;color:rgba(245,240,232,0.85)">We check every hour. The moment the price falls, you get an email with the new price and a direct link to buy.</p>
-      </div>
-      <!-- 4th card: email preview -->
-      <div style="background:#132540;border:1px solid rgba(184,150,12,.2);border-radius:4px;padding:20px;position:relative">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(184,150,12,.1)">
-          <div style="width:28px;height:28px;border-radius:4px;background:var(--gold);display:flex;align-items:center;justify-content:center">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#132540" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div>
-            <div style="font-size:10px;color:rgba(245,240,232,0.4)">noreply@market-arc.net</div>
-            <div style="font-size:12px;font-weight:500;color:#F5F0E8">Price drop &mdash; Nike Air Max 97</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:baseline;gap:8px;padding:10px;background:rgba(184,150,12,.08);border:1px solid rgba(184,150,12,.15);border-radius:4px;margin-bottom:10px">
-          <div style="font-family:var(--serif);font-size:28px;color:var(--gold);font-weight:700">&pound;129</div>
-          <div style="font-size:12px;color:rgba(245,240,232,0.4);text-decoration:line-through">&pound;180</div>
-          <div style="font-size:10px;font-weight:600;background:#1DB954;color:#fff;padding:2px 8px;border-radius:4px;margin-left:auto">&minus;28%</div>
-        </div>
-        <div style="font-size:12px;color:#1DB954;font-weight:600;text-align:center">You saved &pound;51</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- BUSINESS SECTION — darkest -->
 <section class="dark-section reveal">
@@ -409,7 +348,7 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
         <div class="dash-row" style="background:rgba(184,150,12,.03);margin:0 -20px;padding:12px 20px;border-bottom:1px solid var(--line)">
           <div>
             <div class="dash-product" style="color:var(--white3)">Nike Air Max 97</div>
-            <div class="dash-store">asos.com &mdash; Competitor</div>
+            <div class="dash-store">amazon.co.uk &mdash; Competitor</div>
           </div>
           <div class="dash-prices">
             <div class="dash-price" style="color:var(--white3)">&pound;165</div>
@@ -419,43 +358,22 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
         <!-- Row 2: Your product -->
         <div class="dash-row">
           <div>
-            <div class="dash-product">Gymshark Vital Tee</div>
-            <div class="dash-store">gymshark.com &mdash; Your price</div>
+            <div class="dash-product">Apple AirPods Pro</div>
+            <div class="dash-store">apple.com &mdash; Your price</div>
           </div>
           <div class="dash-prices">
-            <div class="dash-price">&pound;25</div>
+            <div class="dash-price">&pound;249</div>
           </div>
         </div>
         <!-- Row 2: Competitor -->
         <div class="dash-row" style="background:rgba(184,150,12,.03);margin:0 -20px;padding:12px 20px;border-bottom:1px solid var(--line)">
           <div>
-            <div class="dash-product" style="color:var(--white3)">Gymshark Vital Tee</div>
-            <div class="dash-store">amazon.co.uk &mdash; Competitor</div>
+            <div class="dash-product" style="color:var(--white3)">Apple AirPods Pro</div>
+            <div class="dash-store">argos.co.uk &mdash; Competitor</div>
           </div>
           <div class="dash-prices">
-            <div class="dash-price" style="color:var(--white3)">&pound;30</div>
-            <div class="dash-gap expensive">+20% more</div>
-          </div>
-        </div>
-        <!-- Row 3: Your product -->
-        <div class="dash-row">
-          <div>
-            <div class="dash-product">Wayfair Velvet Sofa</div>
-            <div class="dash-store">wayfair.co.uk &mdash; Your price</div>
-          </div>
-          <div class="dash-prices">
-            <div class="dash-price">&pound;599</div>
-          </div>
-        </div>
-        <!-- Row 3: Competitor -->
-        <div class="dash-row" style="background:rgba(184,150,12,.03);margin:0 -20px;padding:12px 20px">
-          <div>
-            <div class="dash-product" style="color:var(--white3)">Wayfair Velvet Sofa</div>
-            <div class="dash-store">johnlewis.com &mdash; Competitor</div>
-          </div>
-          <div class="dash-prices">
-            <div class="dash-price" style="color:var(--white3)">&pound;649</div>
-            <div class="dash-gap expensive">+8% more</div>
+            <div class="dash-price" style="color:var(--white3)">&pound;229</div>
+            <div class="dash-gap cheaper">&minus;8% cheaper</div>
           </div>
         </div>
       </div>
@@ -502,9 +420,9 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
         <div style="font-size:36px;margin-bottom:12px">🔌</div>
         <h3 style="font-family:'Cormorant Garamond',serif;color:#C9A84C;font-size:22px;margin-bottom:8px">1. Install the extension</h3>
         <p style="font-family:'DM Sans',sans-serif;color:rgba(255,255,255,0.7);font-size:14px;line-height:1.6">
-          One click install on <a href="https://addons.mozilla.org/firefox/addon/market-arc/" style="color:#C9A84C">Firefox</a>,
+          One click install on <a href="https://chromewebstore.google.com/detail/market-arc/gophaebackmjpcdhmknkfenlnmgphepp" style="color:#C9A84C">Chrome</a>,
           <a href="https://microsoftedge.microsoft.com/addons/detail/market-arc/ljmgpoiogkngpkamdcoafddgbegfclha" style="color:#C9A84C">Edge</a>,
-          or Chrome (coming soon). No sign-up needed to browse.
+          or <a href="https://addons.mozilla.org/firefox/addon/market-arc/" style="color:#C9A84C">Firefox</a>. No sign-up needed to browse.
         </p>
       </div>
 
@@ -526,167 +444,13 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
 
     </div>
 
-    <!-- PLAN COMPARISON -->
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#132540;text-align:center;margin-bottom:32px">
-      What each plan gives you
-    </h3>
-
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:64px">
-
-      <!-- FREE -->
-      <div style="background:white;border-radius:12px;padding:28px;border:1px solid #E8E0D0">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
-          <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px">FREE</span>
-          <span style="font-family:'DM Sans',sans-serif;color:#888;font-size:14px">£0 forever</span>
-        </div>
-        <ul style="font-family:'DM Sans',sans-serif;font-size:14px;color:#444;line-height:2;list-style:none;padding:0;margin:0">
-          <li>✓ Track up to <strong>3 products</strong></li>
-          <li>✓ Prices read directly from the page by the extension</li>
-          <li>✓ Email alerts when prices drop</li>
-          <li>✓ 30-day price history</li>
-          <li>✗ <span style="color:#999">Hourly automatic checks</span></li>
-          <li>✗ <span style="color:#999">Competitor tracking</span></li>
-          <li>✗ <span style="color:#999">API access or webhooks</span></li>
-        </ul>
-        <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#B8960C;margin-top:12px;font-style:italic">
-          Best for: casual shoppers watching a few items
-        </p>
-      </div>
-
-      <!-- PRO -->
-      <div style="background:white;border-radius:12px;padding:28px;border:1px solid #E8E0D0">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
-          <span style="background:#B8960C;color:white;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px">PRO</span>
-          <span style="font-family:'DM Sans',sans-serif;color:#888;font-size:14px">£5.99/mo</span>
-        </div>
-        <ul style="font-family:'DM Sans',sans-serif;font-size:14px;color:#444;line-height:2;list-style:none;padding:0;margin:0">
-          <li>✓ Track up to <strong>25 products</strong></li>
-          <li>✓ Automatic price checks on <strong>100+ UK and US stores</strong></li>
-          <li>✓ Up to <strong>5 products</strong> on major retailer sites</li>
-          <li>✓ Set your own drop threshold (only alert above X%)</li>
-          <li>✓ 90-day price history</li>
-          <li>✗ <span style="color:#999">Competitor tracking</span></li>
-          <li>✗ <span style="color:#999">API access or webhooks</span></li>
-        </ul>
-        <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#B8960C;margin-top:12px;font-style:italic">
-          Best for: active shoppers who want automatic alerts without opening every page
-        </p>
-      </div>
-
-      <!-- PRO+ -->
-      <div style="background:white;border-radius:12px;padding:28px;border:1px solid #E8E0D0">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
-          <span style="background:#B8960C;color:white;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px">PRO+</span>
-          <span style="font-family:'DM Sans',sans-serif;color:#888;font-size:14px">£9.99/mo</span>
-        </div>
-        <ul style="font-family:'DM Sans',sans-serif;font-size:14px;color:#444;line-height:2;list-style:none;padding:0;margin:0">
-          <li>✓ Track up to <strong>25 products</strong></li>
-          <li>✓ <strong>Unlimited premium retailers</strong> — every slot can be premium</li>
-          <li>✓ 🎯 <strong>Target price alerts</strong> — set your exact number, we'll email when it hits</li>
-          <li>✓ Set your own drop threshold</li>
-          <li>✓ 90-day price history</li>
-          <li>✗ <span style="color:#999">Competitor tracking</span></li>
-          <li>✗ <span style="color:#999">API access or webhooks</span></li>
-        </ul>
-        <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#B8960C;margin-top:12px;font-style:italic">
-          Best for: shoppers tracking luxury and premium brands
-        </p>
-      </div>
-
-      <!-- BUSINESS -->
-      <div style="background:white;border-radius:12px;padding:28px;border:2px solid #B8960C">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
-          <span style="background:#B8960C;color:white;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px">BUSINESS</span>
-          <span style="font-family:'DM Sans',sans-serif;color:#888;font-size:14px">£49.99/mo</span>
-        </div>
-        <ul style="font-family:'DM Sans',sans-serif;font-size:14px;color:#444;line-height:2;list-style:none;padding:0;margin:0">
-          <li>✓ <strong>100 intelligence slots</strong> — you decide the split</li>
-          <li>✓ Automatic price checks on <strong>every store</strong></li>
-          <li>✓ <strong>Competitor tracking</strong> — up to 3 per product</li>
-          <li>✓ Intelligence labels on every competitor move</li>
-          <li>✓ Weekly intelligence digest every Monday</li>
-          <li>✓ API keys + webhooks for automation</li>
-          <li>✓ CSV exports of all data</li>
-        </ul>
-        <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#B8960C;margin-top:12px;font-style:italic">
-          Best for: retailers, resellers, and brands tracking market position
-        </p>
-      </div>
-
-    </div>
-
-    <!-- SUPPORTED STORES BY PLAN -->
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#132540;text-align:center;margin-bottom:12px">
-      Supported stores by plan
-    </h3>
-
-    <!-- Tier 1 — Free -->
-    <p style="font-family:'DM Sans',sans-serif;color:#132540;font-size:15px;font-weight:600;margin-bottom:12px;text-align:center">
-      Free — 3 products, automatic alerts
-    </p>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:10px">
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Nike</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">M&amp;S</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Screwfix</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Toolstation</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Halfords</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Wickes</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">DIY.com</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Lakeland</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Clarks</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">River Island</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Cotswold Outdoor</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Littlewoods</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">MandMDirect</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Vinted</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Wedgwood</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Royal Doulton</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Snapfish</span>
-      <span style="background:#132540;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Photobox</span>
-    </div>
-
-    <!-- Tier 2 — Pro -->
-    <p style="font-family:'DM Sans',sans-serif;color:#8B7521;font-size:15px;font-weight:600;margin-top:28px;margin-bottom:12px;text-align:center">
-      Pro — 25 products, 100+ stores
-    </p>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:10px">
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Amazon</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">eBay</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">ASOS</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Argos</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Next</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">John Lewis</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Currys</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Schuh</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">IKEA</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Zara</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">H&amp;M</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Boohoo</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Tommy Hilfiger</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Gymshark</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Superdrug</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Primark</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">New Look</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Wayfair</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Dunelm</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Habitat</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Pandora</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Sports Direct</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Depop</span>
-      <span style="background:#8B7521;color:white;font-family:'DM Sans',sans-serif;font-size:13px;padding:6px 16px;border-radius:20px">Etsy</span>
-    </div>
-
-    <p style="text-align:center;font-family:'DM Sans',sans-serif;color:#888;font-size:13px;margin-top:24px">
-      Free stores include automatic alerts. Pro adds 100+ additional stores. All plans include the browser extension for any online store.
-    </p>
-
     <!-- BUSINESS STEP BY STEP -->
     <div style="background:#132540;border-radius:12px;padding:40px 32px;margin-top:48px">
       <h3 style="font-family:'Cormorant Garamond',serif;color:#C9A84C;font-size:24px;margin-bottom:24px;text-align:center">
         Business plan — 5 minute setup
       </h3>
       <div style="font-family:'DM Sans',sans-serif;color:rgba(255,255,255,0.85);font-size:14px;line-height:2">
-        <p><strong style="color:#C9A84C">1.</strong> Install the extension — <a href="https://addons.mozilla.org/firefox/addon/market-arc/" style="color:#C9A84C">Firefox</a> or <a href="https://microsoftedge.microsoft.com/addons/detail/market-arc/ljmgpoiogkngpkamdcoafddgbegfclha" style="color:#C9A84C">Edge</a>. Done in 20 seconds.</p>
+        <p><strong style="color:#C9A84C">1.</strong> Install the extension — <a href="https://chromewebstore.google.com/detail/market-arc/gophaebackmjpcdhmknkfenlnmgphepp" style="color:#C9A84C">Chrome</a>, <a href="https://microsoftedge.microsoft.com/addons/detail/market-arc/ljmgpoiogkngpkamdcoafddgbegfclha" style="color:#C9A84C">Edge</a>, or <a href="https://addons.mozilla.org/firefox/addon/market-arc/" style="color:#C9A84C">Firefox</a>. Done in 20 seconds.</p>
         <p><strong style="color:#C9A84C">2.</strong> Track your first product — visit any product page, click the extension, hit Track. It's in your dashboard, checked every hour.</p>
         <p><strong style="color:#C9A84C">3.</strong> Track a competitor — on the same product, click "Track as Competitor" and pick which of your products they compete with. Up to 3 per product.</p>
         <p><strong style="color:#C9A84C">4.</strong> Open your Intelligence Matrix — the Competitors tab shows every competitor, their price, the gap, and who's winning. Export to CSV anytime.</p>
@@ -708,7 +472,7 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
 <section class="beige-section reveal" id="pricing">
   <div class="pricing" style="padding-top:60px;padding-bottom:60px">
     <p class="section-label">Pricing</p>
-    <h2>Free users see prices change. Pro users get there <em>first.</em></h2>
+    <h2>Free users see prices change. Pro+ users get there <em>first.</em></h2>
     <div class="plans" style="margin-top:40px;flex-wrap:wrap">
       <div class="plan">
         <div class="plan-name">Free — Test the waters</div>
@@ -718,23 +482,10 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
           <li>Up to 3 products</li>
           <li>Browser extension included</li>
           <li>Email alerts on drops</li>
-          <li>Works on 50+ popular stores</li>
+          <li style="margin-top:8px;font-style:italic;color:#B8960C;font-size:0.85em">Best for: casual shoppers watching a few items</li>
         </ul>
         <a href="https://app.market-arc.net/register" class="plan-cta" style="color:var(--navy);border-color:rgba(19,37,64,0.2)">Get started</a>
         <p style="font-size:11px;color:rgba(19,37,64,0.45);text-align:center;margin-top:12px;line-height:1.5">No credit card required</p>
-      </div>
-      <div class="plan">
-        <div class="plan-name">Pro — Never miss a drop</div>
-        <div class="plan-price">&pound;5.99</div>
-        <div class="plan-period">per month</div>
-        <ul class="plan-features">
-          <li>Up to 25 products</li>
-          <li>100+ open-access stores</li>
-          <li><strong>Includes 5 premium retailer slots</strong></li>
-          <li>Price history &amp; charts</li>
-          <li>Email alerts on drops</li>
-        </ul>
-        <a href="https://app.market-arc.net/upgrade?plan=pro" class="plan-cta" style="color:var(--navy);border-color:rgba(19,37,64,0.2)">Start &pound;5.99/mo</a>
       </div>
       <div class="plan featured" style="border:2px solid var(--gold);position:relative;overflow:visible">
         <span style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px">Most Popular</span>
@@ -742,11 +493,12 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
         <div class="plan-price">&pound;9.99</div>
         <div class="plan-period">per month</div>
         <ul class="plan-features">
-          <li>Up to 25 products</li>
-          <li><strong>Unlimited premium retailers</strong></li>
+          <li><strong>25 products</strong> — never miss a drop</li>
           <li>🎯 <strong>Target price alerts</strong></li>
+          <li style="font-size:0.85em;color:rgba(245,240,232,0.6);font-style:italic;margin-top:-6px;padding-left:16px">Set your exact number, we'll email when it hits</li>
           <li>Price history &amp; charts</li>
           <li>Priority email delivery</li>
+          <li style="margin-top:8px;font-style:italic;color:#B8960C;font-size:0.85em">Best for: anyone who's paid full price and regretted it</li>
         </ul>
         <a href="https://app.market-arc.net/upgrade?plan=pro_plus" class="plan-cta">Start &pound;9.99/mo</a>
         <style>@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}</style>
@@ -758,11 +510,14 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
         <div class="plan-period">per month</div>
         <ul class="plan-features">
           <li>100 intelligence slots</li>
+          <li style="font-size:0.85em;color:#888;font-style:italic;margin-top:-6px;padding-left:16px">You decide the split between products and competitors</li>
           <li>Competitor Intelligence matrix</li>
+          <li style="font-size:0.85em;color:#888;font-style:italic;margin-top:-6px;padding-left:16px">Up to 3 competitors per product</li>
           <li>Instant alerts when competitors move</li>
           <li>Weekly market digest every Monday</li>
           <li>API keys + Webhooks</li>
           <li>Priority processing</li>
+          <li style="margin-top:8px;font-style:italic;color:#B8960C;font-size:0.85em">Best for: sellers who need to know before their customers do</li>
         </ul>
         <a href="https://app.market-arc.net/upgrade?plan=business" class="plan-cta" style="color:var(--navy);border-color:rgba(19,37,64,0.2)">Start now</a>
       </div>
@@ -783,6 +538,36 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
   <a href="https://app.market-arc.net/register" class="btn-primary">Start tracking &mdash; it&rsquo;s free</a>
 </section>
 
+<section style="background:#F5F0E8;padding:24px;border-top:1px solid #E8E0D0">
+  <div style="max-width:720px;margin:0 auto;font-family:'DM Sans',sans-serif;font-size:13px;color:#444;line-height:1.7">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:16px;color:#132540;margin-bottom:10px;font-weight:500">
+      Chrome Web Store compliance
+    </h3>
+    <p style="margin-bottom:10px">
+      Market Arc's use of information received from the Market Arc browser extension complies
+      with the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq" style="color:#B8960C">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.
+    </p>
+    <details>
+      <summary style="cursor:pointer;font-size:13px;color:#666;list-style:none;padding:2px 0">
+        <span style="border-bottom:1px dotted #888">Show data use specifics</span>
+      </summary>
+      <div style="padding-top:10px">
+        <p>Specifically, Market Arc:</p>
+        <ul style="margin-top:8px;padding-left:20px">
+          <li>Uses your email and password only to sign you in and send you price alerts you requested.</li>
+          <li>Uses product URLs only to monitor the prices you chose to track.</li>
+          <li>Does not transfer, sell, or use your data for advertising purposes.</li>
+          <li>Does not monitor your browsing activity — the extension only reads the price on the page when you explicitly click its icon.</li>
+          <li>Does not use your data to determine creditworthiness or for lending purposes.</li>
+        </ul>
+      </div>
+    </details>
+    <p style="margin-top:12px">
+      Full privacy policy: <a href="https://app.market-arc.net/privacy" style="color:#B8960C">app.market-arc.net/privacy</a>. Questions: <a href="mailto:support@market-arc.net" style="color:#B8960C">support@market-arc.net</a>.
+    </p>
+  </div>
+</section>
+
 <!-- FOOTER — darkest -->
 <footer>
   <div>
@@ -793,7 +578,7 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
     <a href="https://app.market-arc.net/privacy">Privacy</a>
     <a href="https://app.market-arc.net/terms">Terms</a>
     <a href="mailto:support@market-arc.net">support@market-arc.net</a>
-    <span style="color:var(--white3);font-size:13px">Chrome · <a href="https://microsoftedge.microsoft.com/addons/detail/market-arc/ljmgpoiogkngpkamdcoafddgbegfclha" style="color:var(--white3);text-decoration:none">Edge</a> · <a href="https://addons.mozilla.org/en-GB/firefox/addon/market-arc/" style="color:var(--white3);text-decoration:none">Firefox</a></span>
+    <span style="color:var(--white3);font-size:13px"><a href="https://chromewebstore.google.com/detail/market-arc/gophaebackmjpcdhmknkfenlnmgphepp" style="color:var(--white3);text-decoration:none">Chrome</a> · <a href="https://microsoftedge.microsoft.com/addons/detail/market-arc/ljmgpoiogkngpkamdcoafddgbegfclha" style="color:var(--white3);text-decoration:none">Edge</a> · <a href="https://addons.mozilla.org/en-GB/firefox/addon/market-arc/" style="color:var(--white3);text-decoration:none">Firefox</a></span>
   </div>
 </footer>
 
