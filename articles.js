@@ -418,4 +418,104 @@ export const ARTICLES = [
 <p>If your question is <em>"I want to buy this from John Lewis, Currys, or Argos when it hits my price — tell me when"</em> — Market Arc is the only tool that can answer it.</p>
 `,
   },
+  {
+    slug: "competitor-price-tracking-uk-retailers",
+    title: "Competitor Price Tracking for UK Retailers — Complete Guide 2026",
+    description: "How UK retailers track competitor prices in 2026 — what to monitor, how often, and the three decisions every price move forces you to make.",
+    date: "2026-05-05",
+    excerpt: "Competitor pricing now updates multiple times per day in UK e-commerce. What to monitor, how often to check, and the three decisions every competitor price move forces you to make — match, hold, or split the difference.",
+    body: `
+<p>Competitor price tracking used to mean a spreadsheet and a Friday afternoon. Someone would visit Currys, Argos, and Amazon, note down prices for the top 20 SKUs, and paste them into a tab that was already out of date by Monday morning.</p>
+
+<p>In 2026, that approach is no longer viable. Competitors update pricing frequently — sometimes multiple times per day — and manual tracking simply cannot keep pace. If you are running a UK e-commerce operation and still checking competitor prices manually, you are not getting intelligence. You are getting history.</p>
+
+<p>This guide explains how competitor price tracking actually works for UK retailers, what you should be monitoring, and how to turn raw price data into decisions that protect your margin.</p>
+
+<h2>What Competitor Price Tracking Actually Is</h2>
+
+<p>Competitor price tracking is the process of automatically monitoring what your direct competitors charge for the same or equivalent products — and getting alerted the moment something changes.</p>
+
+<p>The goal is not to always be the cheapest. The goal is to be intelligently competitive. Matching every competitor move leads directly to margin erosion. The point of tracking is to make informed decisions, not reactive ones.</p>
+
+<p>A reliable competitor monitoring setup works in three coordinated layers: data collection across competitor sites, product matching and normalisation to determine which changes actually matter, and prioritised alerts that flow into your pricing workflow.</p>
+
+<p>When those three layers work together, competitor price tracking stops being a reporting exercise and starts being an operational tool.</p>
+
+<h2>What You Should Actually Be Monitoring</h2>
+
+<p>Most UK operators make the same mistake when they start: they try to track everything. That creates noise, not signal.</p>
+
+<p>Monitoring five to ten competitors is enough for most e-commerce teams. Start with direct rivals and key marketplace sellers that overlap strongly with your catalogue.</p>
+
+<p>For each competitor, the data points that matter most are:</p>
+
+<p><strong>Price changes</strong> — the core signal. When a competitor drops or raises their price on a product you also sell, you need to know immediately.</p>
+
+<p><strong>Stock availability</strong> — a competitor going out of stock on a key product is an opportunity. A competitor coming back into stock on something you have been selling at a premium is a risk.</p>
+
+<p><strong>Promotions</strong> — flash reductions, bundle offers, and site-wide sales are pricing signals even if they are temporary. Short-term discounts should not drive long-term pricing decisions, but you still need to know they are happening.</p>
+
+<p>Keep your scope tied to clear commercial goals such as protecting margin, maintaining a target price index, or improving category competitiveness. Everything else is noise.</p>
+
+<h2>How Often Prices Actually Change</h2>
+
+<p>In a sample of competitor pricing monitors tracked over 30 days in April 2026, 42% flagged at least one price change within that period. That is not weekly. That is continuous.</p>
+
+<p>For fast-moving pricing environments, daily or intraday updates prevent lag and reduce missed opportunities. A Monday morning report does not tell you what Currys did on Wednesday afternoon.</p>
+
+<p>The practical implication: if your monitoring runs once a day, you will miss intraday moves. If it runs weekly, you are effectively pricing blind. The minimum viable frequency for UK electronics, fashion, and homeware categories is hourly checks on your most competitive SKUs.</p>
+
+<h2>The Three Decisions Every Price Move Forces</h2>
+
+<p>When a competitor changes their price, you have three options. Understanding them in advance is what separates reactive pricing from strategic pricing.</p>
+
+<p><strong>Match</strong> — lower your price to meet or beat theirs. Protects volume. Costs margin. The right move when the competitor is a direct rival on a high-velocity SKU and the price gap is large enough that customers will notice.</p>
+
+<p><strong>Hold</strong> — keep your current price. Protects margin. Risks some volume. The right move when you have service, availability, or trust advantages that justify the gap, or when the competitor's move looks like a temporary promotion rather than a structural reprice.</p>
+
+<p><strong>Split the difference</strong> — move partway. Often underused. If a competitor drops from £299 to £249 and your price is £289, moving to £269 may recover competitiveness without fully surrendering margin.</p>
+
+<p>Without structured decision rules, pricing becomes inconsistent and reactive. The operators who protect margin understand that the goal is not to be the cheapest — it is to be intelligently competitive.</p>
+
+<p>The way to have structured rules is to decide in advance, per category, what your response threshold is. If a competitor drops more than 10% on a top-10 SKU, match. If they drop less than 5% on a long-tail product, hold. Document the rules. Apply them consistently.</p>
+
+<h2>The Hidden Opportunity: Price Rises</h2>
+
+<p>Every operator focuses on competitor price drops. Almost nobody pays attention to price rises.</p>
+
+<p>When a competitor raises their price, your relative position improves without you changing anything. If Currys moves from £269 to £299 on a product you sell at £289, you went from being £20 more expensive to £10 cheaper — overnight, without touching your own price.</p>
+
+<p>This happens regularly. Retailers face increasing margin pressure from inflation, marketplace fees, and aggressive competition. They raise prices to recover margin. Most of their rivals miss it entirely.</p>
+
+<p>A competitor price tracking setup that only alerts you to drops is missing half the picture. Price rises are margin opportunities. The operators who catch them first are the ones who respond fastest.</p>
+
+<h2>Manual Tracking vs Automated Monitoring</h2>
+
+<p>Manual tracking — spreadsheets, browser tabs, copy-paste — has three compounding problems.</p>
+
+<p>It is slow. By the time someone has checked 20 competitor pages and updated the spreadsheet, some of those prices have already changed again.</p>
+
+<p>It does not scale. Twenty SKUs across five competitors is 100 data points per check. If you have 200 SKUs and six competitors, that is 1,200 data points. No one is checking that manually with any useful frequency.</p>
+
+<p>It is human. The person who does the Friday price check calls in sick, or leaves the company, and the process breaks entirely.</p>
+
+<p>Automated monitoring is essential. Manual tracking is impossible at any meaningful scale or frequency. The switch from manual to automated tracking typically takes less than a day to set up. The ongoing cost is a fraction of the margin recovered from a single well-timed pricing decision.</p>
+
+<p>For a step-by-step on setting up automated tracking for UK retailers, see <a href="/blog/how-to-track-competitor-prices-uk">our complete guide on tracking competitor prices in the UK</a>.</p>
+
+<h2>What to Look for in a Competitor Price Tracking Tool</h2>
+
+<p>The UK market has several options at different price points and capability levels. When evaluating them, the questions that matter are:</p>
+
+<p><strong>Does it cover UK retailers specifically?</strong> Many tools are built around Amazon and US marketplaces. If your competitors are Currys, Argos, or John Lewis, you need a tool built for UK retail — not one that treats UK stores as an afterthought.</p>
+
+<p><strong>How frequently does it check?</strong> Daily checks miss intraday moves. Look for hourly or faster on your most competitive products.</p>
+
+<p><strong>Does it alert on price rises as well as drops?</strong> Most tools default to drop alerts only. Rise alerts are where the hidden margin opportunities live.</p>
+
+<p><strong>Does it give you the gap percentage immediately?</strong> Knowing a competitor dropped their price is useful. Knowing they are now 12% cheaper than you — and that you are losing the price comparison on three SKUs — is actionable.</p>
+
+<p><strong>Can it export to CSV?</strong> Your pricing team needs data in a format they can use. A dashboard that cannot export is a reporting tool, not an operational one.</p>
+`,
+  },
 ];
