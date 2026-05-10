@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Market Arc — Intelligence for every purchase</title>
 <meta name="description" content="Track prices on 100+ stores. Get alerts when prices drop. Free browser extension for smart shoppers.">
+<link rel="canonical" href="https://market-arc.net" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
@@ -189,6 +190,23 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
   .strip{padding:16px 20px;gap:20px}
 }
 </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1497125975147602');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1497125975147602&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -215,12 +233,13 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
         &#9889; <strong style="color:var(--gold)">Smart shoppers don&rsquo;t copy-paste URLs.</strong> Open any product page, click once &mdash; price tracked instantly. Install free: <a href="https://chromewebstore.google.com/detail/market-arc/gophaebackmjpcdhmknkfenlnmgphepp" target="_blank" style="color:var(--gold);font-weight:600;text-decoration:underline">Chrome</a>, <a href="https://microsoftedge.microsoft.com/addons/detail/market-arc/ljmgpoiogkngpkamdcoafddgbegfclha" target="_blank" style="color:var(--gold);font-weight:600;text-decoration:underline">Edge</a>, or <a href="https://addons.mozilla.org/en-US/firefox/addon/market-arc/" target="_blank" style="color:var(--gold);font-weight:600;text-decoration:underline">Firefox</a>
       </div>
       <div class="hero-eyebrow" style="margin-bottom:28px">Price intelligence for smart shoppers</div>
-      <h1 style="text-align:left;margin-bottom:20px;font-size:clamp(28px,4vw,48px)">Stop getting outsmarted on <em>price.</em></h1>
-      <p style="font-size:17px;color:var(--white2);font-weight:300;line-height:1.7;margin-bottom:36px;max-width:460px">Shop smarter. Save more. Know before you buy.<br>Track competitors. Win more. Know before they do.</p>
+      <h1 style="text-align:left;margin-bottom:20px;font-size:clamp(28px,4vw,48px)">UK shoppers already saved <span id="stat-savings-hero">&pound;18,630</span> with Market Arc. You're still paying full price.</h1>
+      <p style="font-size:17px;color:var(--white2);font-weight:300;line-height:1.7;margin-bottom:36px;max-width:460px">Start tracking. Start saving.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px">
         <a href="https://app.market-arc.net/register" class="btn-primary" style="border-radius:6px">Start free &mdash; 3 products</a>
         <a href="https://app.market-arc.net/upgrade?plan=business" class="btn-secondary" style="border-radius:6px">Track competitors &mdash; &pound;49.99/mo</a>
       </div>
+      <div style="background:#B8960C;color:#132540;padding:11px 20px;border-radius:8px;font-weight:800;font-size:14px;letter-spacing:0.3px;text-align:center;margin-top:4px">&#128293; 50% off your first 3 months &mdash; applied automatically at checkout &#128293;</div>
       <p class="hero-note" style="text-align:left">Free plan — no credit card required &nbsp;&middot;&nbsp; Cancel anytime &nbsp;&middot;&nbsp; Chrome &nbsp;&middot;&nbsp; Edge &nbsp;&middot;&nbsp; Firefox</p>
     </div>
     <!-- Right column: Keepa table first, then Nike card -->
@@ -401,6 +420,10 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
       <div class="counter-num" id="stat-drops">&mdash;</div>
       <div class="counter-label">Drops detected</div>
     </div>
+    <div class="counter-item">
+      <div class="counter-num" id="stat-savings">&mdash;</div>
+      <div class="counter-label">Total savings tracked</div>
+    </div>
   </div>
 </section>
 
@@ -483,6 +506,7 @@ footer{background:var(--darkest);border-top:1px solid var(--line);padding:40px;d
   <div class="pricing" style="padding-top:60px;padding-bottom:60px">
     <p class="section-label">Pricing</p>
     <h2>Free users see prices change. Pro+ users get there <em>first.</em></h2>
+    <div style="background:#B8960C;color:#132540;padding:11px 20px;border-radius:8px;font-weight:800;font-size:14px;letter-spacing:0.3px;text-align:center;margin:0 auto 24px;max-width:900px">&#128293; 50% off your first 3 months &mdash; applied automatically at checkout &#128293;</div>
     <div class="plans" style="margin-top:40px;flex-wrap:wrap">
       <div class="plan">
         <div class="plan-name">Free — Test the waters</div>
@@ -603,14 +627,16 @@ var io = new IntersectionObserver(function(entries) {
 document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el) });
 
 /* Animated counters */
-function animateCounter(el, target) {
+function formatCurrency(n) { return '£' + Math.round(n).toLocaleString('en-GB') }
+
+function animateCounter(el, target, formatter) {
+  formatter = formatter || function(n) { return n >= 1000 ? (n/1000).toFixed(1).replace(/\.0$/,'') + 'k' : String(n) };
   var duration = 1200;
   var start = performance.now();
-  function fmt(n) { return n >= 1000 ? (n/1000).toFixed(1).replace(/\.0$/,'') + 'k' : String(n) }
   function tick(now) {
     var t = Math.min((now - start) / duration, 1);
     var ease = 1 - Math.pow(1 - t, 3);
-    el.textContent = fmt(Math.round(target * ease));
+    el.textContent = formatter(Math.round(target * ease));
     if (t < 1) requestAnimationFrame(tick);
   }
   requestAnimationFrame(tick);
@@ -623,6 +649,10 @@ fetch('https://app.market-arc.net/api/stats')
     /* Hero stats bar */
     if (data.products) animateCounter(document.getElementById('hero-products'), data.products);
     if (data.checks_this_week) animateCounter(document.getElementById('hero-checks'), data.checks_this_week);
+    if (data.total_savings) {
+      document.getElementById('stat-savings-hero').textContent =
+        '£' + Math.round(data.total_savings).toLocaleString('en-GB');
+    }
 
     /* Lower counter section — animate on scroll */
     var obsCounter = new IntersectionObserver(function(entries) {
@@ -631,6 +661,7 @@ fetch('https://app.market-arc.net/api/stats')
           if (data.products) animateCounter(document.getElementById('stat-products'), data.products);
           if (data.checks_this_week) animateCounter(document.getElementById('stat-checks'), data.checks_this_week);
           if (data.drops) animateCounter(document.getElementById('stat-drops'), data.drops);
+          if (data.total_savings) animateCounter(document.getElementById('stat-savings'), data.total_savings, formatCurrency);
           obsCounter.disconnect();
         }
       });
@@ -643,7 +674,26 @@ fetch('https://app.market-arc.net/api/stats')
     document.getElementById('stat-products').textContent = '100+';
     document.getElementById('stat-checks').textContent = '1k+';
     document.getElementById('stat-drops').textContent = '50+';
+    document.getElementById('stat-savings').textContent = '£10k+';
   });
+</script>
+
+<script>
+(function(){
+  var section = document.getElementById('pricing');
+  if (!section || typeof window.fbq !== 'function' || typeof IntersectionObserver !== 'function') return;
+  var fired = false;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!fired && e.isIntersecting && e.intersectionRatio >= 0.5) {
+        fired = true;
+        fbq('track', 'ViewContent', {content_name:'pricing', content_category:'pricing_section'});
+        obs.disconnect();
+      }
+    });
+  }, {threshold:0.5});
+  obs.observe(section);
+})();
 </script>
 </body>
 </html>
