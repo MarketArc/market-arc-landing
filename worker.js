@@ -31,6 +31,25 @@ function formatDate(iso) {
   return d.toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" });
 }
 
+const META_PIXEL_BASE = `
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1497125975147602');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1497125975147602&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+`;
+
 const SHARED_CSS = `
 :root{--navy:#132540;--navy2:#0F1E30;--beige:#F5F0E8;--beige2:#EDE7DC;--gold:#B8960C;--gold2:#D4A820;--gold-light:rgba(184,150,12,0.12);--gold-dim:rgba(184,150,12,0.4);--white:#F2F0EB;--white2:rgba(242,240,235,0.7);--white3:rgba(242,240,235,0.4);--line:rgba(184,150,12,0.1);--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -104,6 +123,7 @@ function layout({ title, description, canonical, ogTitle, ogDescription, content
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>${SHARED_CSS}</style>
+${META_PIXEL_BASE}
 </head>
 <body>
 <nav>
