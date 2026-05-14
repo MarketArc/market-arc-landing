@@ -132,6 +132,7 @@ ${META_PIXEL_BASE}
   <div class="nav-links">
     <a href="/#how-it-works">How It Works</a>
     <a href="https://app.market-arc.net/stores">Stores</a>
+    <a href="https://app.market-arc.net/deals">Deals</a>
     <a href="/#pricing">Pricing</a>
     <a href="https://app.market-arc.net/login">Sign in</a>
     <a href="https://app.market-arc.net/register" class="nav-cta">Start Free</a>
@@ -202,6 +203,7 @@ ${META_PIXEL_BASE}
     <a href="/#how-it-works">How It Works</a>
     <a href="/contact">Contact</a>
     <a href="https://app.market-arc.net/stores">Stores</a>
+    <a href="https://app.market-arc.net/deals">Deals</a>
     <a href="/#pricing">Pricing</a>
     <a href="https://app.market-arc.net/login">Sign in</a>
     <a href="https://app.market-arc.net/register" class="nav-cta">Start Free</a>
