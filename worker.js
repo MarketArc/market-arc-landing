@@ -9,6 +9,7 @@ function buildSitemap() {
   const urls = [
     "https://market-arc.net/",
     "https://market-arc.net/blog",
+    "https://market-arc.net/contact",
     ...ARTICLES.map((a) => `https://market-arc.net/blog/${a.slug}`),
   ];
   const entries = urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n");
@@ -150,6 +151,100 @@ function ctaBox() {
 </div>`;
 }
 
+function renderContact() {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact — Market Arc</title>
+<meta name="description" content="Get in touch with Market Arc — technical support and direct line to the founder.">
+<link rel="canonical" href="https://market-arc.net/contact">
+<meta property="og:title" content="Contact — Market Arc">
+<meta property="og:description" content="Get in touch with Market Arc — technical support and direct line to the founder.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://market-arc.net/contact">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Market Arc">
+<meta name="twitter:description" content="Get in touch with Market Arc — technical support and direct line to the founder.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>${SHARED_CSS}
+body{background:var(--navy);color:var(--white)}
+nav .nav-cta:hover{opacity:.85;text-decoration:none}
+.contact-wrap{padding:72px 24px 96px;min-height:calc(100vh - 220px)}
+.contact-inner{max-width:880px;margin:0 auto}
+.contact-eyebrow{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:18px}
+.contact-h1{font-family:var(--serif);font-size:clamp(34px,5vw,52px);line-height:1.08;letter-spacing:-.02em;color:var(--white);text-align:center;font-weight:700;margin-bottom:12px}
+.contact-sub{font-size:17px;color:var(--white2);text-align:center;margin:0 0 48px;font-weight:300}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.contact-card{background:var(--beige);border-radius:12px;padding:36px 30px;border:1px solid rgba(184,150,12,0.18);text-align:center;transition:transform .2s,border-color .2s}
+.contact-card:hover{transform:translateY(-2px);border-color:var(--gold-dim)}
+.contact-icon{font-size:44px;margin-bottom:14px;line-height:1}
+.contact-title{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--navy);margin-bottom:10px;letter-spacing:-.01em}
+.contact-desc{font-size:14px;color:rgba(19,37,64,.65);margin-bottom:22px;line-height:1.55}
+.contact-email{display:inline-block;background:var(--gold);color:var(--navy);padding:11px 22px;border-radius:6px;font-weight:600;font-size:14px;text-decoration:none}
+.contact-email:hover{opacity:.9;text-decoration:none}
+footer.landing-footer{background:#0a1018;border-top:1px solid var(--line);padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;color:var(--white3);font-size:13px;text-align:left}
+footer.landing-footer .footer-logo{font-family:var(--serif);font-size:18px;color:var(--gold)}
+footer.landing-footer .footer-links{display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+footer.landing-footer .footer-links a{font-size:13px;color:var(--white3);text-decoration:none}
+footer.landing-footer .footer-links a:hover{color:var(--gold)}
+@media(max-width:640px){.contact-grid{grid-template-columns:1fr}.contact-wrap{padding:48px 18px 64px}footer.landing-footer{flex-direction:column;align-items:flex-start;padding:28px 20px}}
+</style>
+${META_PIXEL_BASE}
+</head>
+<body>
+<nav>
+  <div class="logo"><a href="/"><img src="/market-arc-logo-dark.svg" width="180" height="53" alt="Market Arc"></a></div>
+  <div class="nav-links">
+    <a href="/blog">Blog</a>
+    <a href="/#how-it-works">How It Works</a>
+    <a href="/contact">Contact</a>
+    <a href="https://app.market-arc.net/stores">Stores</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="https://app.market-arc.net/login">Sign in</a>
+    <a href="https://app.market-arc.net/register" class="nav-cta">Start Free</a>
+  </div>
+</nav>
+<main class="contact-wrap">
+  <div class="contact-inner">
+    <div class="contact-eyebrow">Contact</div>
+    <h1 class="contact-h1">Get in touch</h1>
+    <p class="contact-sub">We're here to help</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">📧</div>
+        <div class="contact-title">Technical Support</div>
+        <p class="contact-desc">Bug reports, scraping issues, account problems</p>
+        <a class="contact-email" href="mailto:support@market-arc.net">support@market-arc.net</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">👤</div>
+        <div class="contact-title">Founder</div>
+        <p class="contact-desc">Partnerships, enterprise plans, feedback, anything else</p>
+        <a class="contact-email" href="mailto:iulian@market-arc.net">iulian@market-arc.net</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="landing-footer">
+  <div>
+    <span class="footer-logo">Market Arc</span>
+    <span style="font-size:11px;color:var(--white3);margin-left:10px">EST. 2026</span>
+  </div>
+  <div class="footer-links">
+    <a href="https://app.market-arc.net/privacy">Privacy</a>
+    <a href="https://app.market-arc.net/terms">Terms</a>
+    <a href="mailto:support@market-arc.net">support@market-arc.net</a>
+    <a href="mailto:iulian@market-arc.net">iulian@market-arc.net</a>
+    <span style="color:var(--white3);font-size:13px"><a href="https://chromewebstore.google.com/detail/market-arc/gophaebackmjpcdhmknkfenlnmgphepp" style="color:var(--white3);text-decoration:none">Chrome</a> · <a href="https://microsoftedge.microsoft.com/addons/detail/market-arc/ljmgpoiogkngpkamdcoafddgbegfclha" style="color:var(--white3);text-decoration:none">Edge</a> · <a href="https://addons.mozilla.org/en-GB/firefox/addon/market-arc/" style="color:var(--white3);text-decoration:none">Firefox</a></span>
+  </div>
+</footer>
+</body>
+</html>`;
+}
+
 function renderBlogIndex() {
   const items = [...ARTICLES]
     .sort((a, b) => (a.date < b.date ? 1 : -1))
@@ -216,6 +311,9 @@ export default {
     }
     if (path === "/blog") {
       return html(renderBlogIndex());
+    }
+    if (path === "/contact") {
+      return html(renderContact());
     }
     if (path.startsWith("/blog/")) {
       const slug = path.slice("/blog/".length);
